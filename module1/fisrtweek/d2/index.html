@@ -1,15 +1,254 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Epicode</title>
+    <meta name="description" content="Primi passi operativi per la creazione di un blog in Html. Scopri 
+    come iniziare in modo facile.">
 </head>
+
 <body>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        #logo {
+            width: 250px;
+        }
+
+        header,
+        nav {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        nav {
+            font-size: 30px;
+            padding: 20px;
+            background-color: rgb(13, 13, 85);
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .margin20 {
+            margin: 20px;
+        }
+
+        .marginBttm,
+        section {
+            margin-bottom: 20px;
+        }
+
+        .video {
+            text-align: center;
+            padding: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: solid 1px grey;
+            text-align: center;
+        }
+
+        .purple {
+            background-color: purple;
+        }
+
+
+        aside>div>div>p {
+            color: aliceblue;
+            font-size: 20px;
+            padding: 5px;
+        }
+
+        .blue {
+            background-color: rgb(43, 43, 194);
+            color: white;
+        }
+
+        .input-aside>input {
+            font-size: 20px;
+            padding: 2px;
+            margin: 8px;
+        }
+
+        #border-radius {
+            border-radius: 5px;
+        }
+
+        .pad20 {
+            padding: 20px;
+        }
+
+        .aside-item {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer {
+            background-color: rgb(13, 13, 85);
+            color: white;
+
+        }
+
+        footer>p {
+            padding: 5px;
+        }
+    </style>
     <header>
         <div>
-            <img src="assets/img/logo.svg" alt="logo Epicode">
+            <img src="assets/img/logo.svg" alt="logo Epicode" id="logo">
+        </div>
+        <div>
+            <h1>Epicode. Il blog dei developer</h1>
         </div>
     </header>
+    <nav>
+        <div><a href="#">MENU</a></div>
+        <div><a href="#">ARTICOLI</a></div>
+        <div><a href="#">LAVORA CON NOI</a></div>
+    </nav>
+    <main class="margin20">
+        <section>
+            <div>
+                <h2>Come creare un template per i post:</h2>
+                <p>(di <em>Mario Rossi</em>, pubblicato il 25\12\20)</p>
+            </div>
+        </section>
+        <section>
+            <div>
+                <p class="marginBttm"><strong>La prima cosa da fare è suddividere la pagina in blocchi
+                        logici, identificando le parti comuni da applicare a tutta la pagina:</strong> </p>
+            </div>
+            <div class="marginBttm">
+                <p>Le varie arie saranno quindi suddivise in: </p>
+                <ul>
+                    <li>Contenuuti d' intestazione del <em>tag</em> header</li>
+                    <li>Contenuuti centrali, variabbili del <em>tag</em> main(corpo principale)</li>
+                    <li>Contenuuti di fine pagina comuni, contenuti nel <em>tag</em> footer</li>
+                </ul>
+            </div>
 
-</body>
+        </section>
+        <section>
+            <div>
+                <p class="marginBttm"><strong>Formattazione del codice:</strong></p>
+            </div>
+            <div>
+                <p>Il testo dell articolo dovrà essere formattato per identificare tutte le parti
+                    da selezionare con i CSS. Perciò i passi saranno:
+                </p>
+            </div>
+            <div class="marginBttm">
+                <ol>
+                    <li>Progettare il markup assegnando ad ogni specifico testo il <em>tag</em> appropiato.</li>
+                    <li>Scrivere l' HTML dai <em>tag</em> esterni a quelli interni e dall' alto verso il basso.</li>
+                    <li>Applicare gl stili CSS.</li>
+                </ol>
+            </div>
+            <div>
+                <p><em>L' applicazione di stili CSS è cresciuta negl' ultimi anni
+                        fino a raggiungere una diffusione pressapoco totale</em></p>
+            </div>
+        </section>
+        <section>
+            <h4>Diffusione dei CSS:</h4>
+            <table class="marginBttm">
+                <tr>
+                    <th>ANNO</th>
+                    <th>% DI UTILIZZO</th>
+                    <th>SUPPORTO BROWSER</th>
+                </tr>
+                <tr>
+                    <td>2000</td>
+                    <td>20%</td>
+                    <td>17%</td>
+                </tr>
+                <tr>
+                    <td>2005</td>
+                    <td>35%</td>
+                    <td>22%</td>
+                </tr>
+                <tr>
+                    <td>2007</td>
+                    <td>55%</td>
+                    <td>46%</td>
+                </tr>
+                <tr>
+                    <td>2008</td>
+                    <td>81%</td>
+                    <td>55%</td>
+                </tr>
+                <tr>
+                    <td>2012</td>
+                    <td>100%</td>
+                    <td>76%</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <aside>
+        <div class="purple">
+            <div class="marginBttm">
+                <p>Un test di validazione potrà essere svolto tramite il tool on-line
+                    <a href="https://jigsaw.w3.org/css-validator/manual.html.it#url">VAI AL TEST</a> dedicato allo
+                    scopo. Una volta ottimizzato il tutto, avremo raggiunto il nostro obbiettivo e saremo dei
+                    developer come loro:
+                </p>
+            </div>
+            <div class="video">
+                <iframe class="video-padding" width="560" height="315" src="https://www.youtube.com/embed/jLSbxCz0Ioo?si=7d_uFObTPrDg3Cx8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="blue">
+            <div>
+                <p>Vuoi rimanere aggiornato su altre novità del blog? iscriviti alla nostra newsletter:</p>
+            </div>
+            <div>
+                <form class="input-aside">
+                    <input type="email" placeholder="Insert here your e-mail!!">
+                    <input id="border-radius" type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+        <div class="blue">
+            <h3 class="pad20">Artivcoli correlati:</h3>
+            <div class="aside-item pad20">
+                <div>
+                    <p><a href="">Validare codice HTML</a></p>
+                    <P>Categoria: <strong>Develop</strong></P>
+                    <p><em>Data:18-9-2020</em></p>
+                </div>
+                <div>
+                    <p><a href="">Correggere la sintassi</a></p>
+                    <P>Categoria: <strong>Develop</strong></P>
+                    <p><em>Data:18-9-2020</em></p>
+                </div>
+                <div>
+                    <p><a href="">Meno Kb nella pagina</a></p>
+                    <P>Categoria: <strong>Ottimizzazione</strong></P>
+                    <p><em>Data:18-9-2020</em></p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <footer>
+        <p>Blog Epicode &copy 2023</p>
+        <p>Testata online di Mario Rossi, registrata con prot. n 213\2018 - via Luigi
+            Enaudi 2 - Milano. P.IVA 00112233
+        </p>
+        <p><a href="mailto:info@epicode.school">info@epicode.school</a></p>
+    </footer>
+
 </html>
+</body>
