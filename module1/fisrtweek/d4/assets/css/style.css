@@ -1,0 +1,213 @@
+/* IMPOSTAZIONI GENERALI */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.conteiner-background{
+    background-image: url("../img/sfondo.png");
+    font-family: 'Poppins', sans-serif;
+}
+
+.padding15{
+    padding: 15px;
+}
+
+.padding30{
+    padding: 30px;
+}
+
+/* HEADER */
+
+#logo img{
+    width: 250px;
+}
+
+.header-item{
+    background: rgb(5,94,133);
+    background: linear-gradient(0deg, rgba(5,94,133,1) 25%, rgba(40,159,204,1) 78%);
+    text-align: center;
+}
+
+header div h3{
+    color: white;
+    padding: 5px ;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.padding-btm-tp{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.box-shdw{
+    box-shadow: 2px 5px 2px #716f6f60;
+}
+
+/* MAIN */
+
+.radius{
+    border-radius: 10px;
+
+}
+
+.div-video{
+    margin-bottom: 20px;
+}
+
+main.padding-btm-tp{
+    margin-top: 20px;
+    background-color: white;
+}
+
+main h1{
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.clr-grey{
+    color:grey;
+}
+
+.clr-purple{
+    color: purple;
+    font-weight: 700;
+}
+
+ul li {
+    list-style: initial;
+}
+
+ol li {
+    list-style-type:  decimal;
+}
+
+ol, ul {
+    padding-left: 30px;
+
+}
+
+.style-tag{
+    background-color: rgb(211, 208, 208);
+    border: 2px solid grey;
+    border-radius: 5px;
+}
+
+
+th{
+    line-height: normal;
+    max-width: 80px;
+    height: 60px;
+}
+
+td{
+    line-height: normal;
+    height: 40px;
+    text-align: center;
+}
+.sorgente tr:nth-child(even) {
+    background-color: #CCCCCC; 
+}
+.sorgente tr:nth-child(odd) {
+    background-color: #F0F0F0; 
+}
+
+table thead th{
+    background-color: rgb(58, 120, 255);
+    color: white;
+}
+
+table{
+    border-bottom:2px solid rgb(58, 120, 255);
+}
+
+.center {
+    text-align: center;
+}
+
+
+
+h2{
+    font-size: 25px;
+}
+
+.square-gray{
+    background-color: rgba(160, 159, 159, 0.553);
+    margin-bottom: 20px;
+}
+
+.blue{
+    background-color: rgb(58, 120, 255);
+    color: white;
+}
+
+.brd-trat{
+    margin-right: 2px;
+    border-bottom: 2px dotted grey;
+}
+
+.square-gray a{
+    color: rgb(25, 215, 199);
+    font-weight: 700;
+}
+
+.right{
+    text-align: right;
+}
+
+footer{
+    margin-top: 20px;
+    background: rgb(5,94,133);
+    background: linear-gradient(0deg, rgba(5,94,133,1) 25%, rgba(40,159,204,1) 78%);
+    color: white;
+}
+
+footer a {
+    color: rgb(116, 33, 116);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+/* TABELLE */
+
+/* FORM */
+
+/* ELEMENTI NELL' ASIDE */
+
+/* FOOTER */
