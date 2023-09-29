@@ -1,0 +1,190 @@
+/* general */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+body p {
+    color: #393d41;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.p-small{
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.p-big{
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+.flex {
+    display: flex;
+}
+
+body h4{
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.center {
+    text-align: center;
+}
+
+.padding150-200{
+    padding: 150px 200px;
+}
+
+.padding100{
+    padding: 100px;
+}
+
+.padding-tb-200{
+    padding: 200px 0;
+}
+
+.padding-right50{
+    padding-right: 50px;
+}
+
+.padding5025{
+    padding: 50px 25px;
+}
+
+.padding10{
+    padding: 10px;
+}
+.padding5{
+    padding: 5px;
+}
+.padding50 {
+    padding: 50px;
+}
+
+.padding-btm40{
+    padding-bottom: 40px;
+}
+
+.margin-t-b20{
+    margin: 20px 0;
+}
+
+.margin-t-b40{
+    margin: 40px 0;
+}
+
+.margin-top40{
+    margin-top: 40px;
+}
+
+/* header */
+
+#logo-epic {
+    background-color: black;
+    padding: 40px 0 40px 80;
+    
+}
+
+#logo-epic img {
+    width: 200px;
+}
+
+/* main */
+
+.presentation h1 {
+    color: #25a2c3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+.background1{
+    background-image: url(../images/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.background1 a {
+    background-color:#f04c2f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 20px 40;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.img-radius img{
+    border-radius: 50%;
+    width: 450px;
+}
+
+.red {
+    background-color: #e22d0e;
+}
+
+.white{
+    color: white;
+}
+
+.red, footer h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.border-div-img{
+    border: 1px solid #dee1e3;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.img-item img{
+    width: 400px;
+    height: 280px;
+}
+
+.img-item{
+    width: 400px;
+}
+
+.btw{
+    justify-content: space-between;
+}
+
+.margin5025{
+    margin: 50px 25px;
+}
+
+footer{
+    background-color:#25a2c3;
+}
+
+footer>div> p,a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.65;
+    color:  #c8e7f0;
+}
+
+.border-btm{
+    border-bottom: 1px solid  #c8e7f0;
+}
+
+.aling-center {
+    justify-content: center;
+}
+
+.clr-footer{
+    color:  #c8e7f0;
+    font-size: 1rem;
+}
+
