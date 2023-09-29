@@ -73,12 +73,6 @@ body h4{
     width: 200px;
 }
 
-/* .clr-footer{
-    color:  #c8e7f0;
-} */
-
-/* main */
-
 .presentation h1 {
     color: #25a2c3;
     font-family: 'Montserrat', sans-serif;
@@ -124,7 +118,7 @@ body h4{
 
 .img-bckgr-item1{
     background-image: url(../images/foto1.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 300px;
@@ -132,7 +126,7 @@ body h4{
 
 .img-bckgr-item2{
     background-image: url(../images/foto2.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 300px;
@@ -140,7 +134,7 @@ body h4{
 
 .img-bckgr-item3{
     background-image: url(../images/foto3.jpg);
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 300px;
