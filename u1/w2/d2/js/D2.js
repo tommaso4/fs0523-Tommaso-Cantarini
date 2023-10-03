@@ -3,13 +3,15 @@
 */
 
 let num1 = 20;
-let num2 = 12;
-
+let num2 = 20;
+let str = 'Sono uguali';
 function compareNumber(a, b) {
   if (a > b) {
     return a
-  } else {
+  } else if (b > a) {
     return b
+  } else {
+    return str
   }
 }
 
@@ -102,7 +104,7 @@ totalCost2(totalShoppingCart2);
 */
 
 let num3 = 22;
-let arr= [];
+let arr = [];
 arr.push(num1, num2, num3)
 const sorted = arr.sort((a, b) => a - b);
 arr.reverse();
@@ -115,8 +117,8 @@ console.log(arr);
 let test;
 test = 4;
 if (typeof test === 'number') {
-    console.log('This type of variable is a number!!');
-  } else {
+  console.log('This type of variable is a number!!');
+} else {
   console.log('This type of variable isn\' a number!!');
 }
 
@@ -125,10 +127,10 @@ if (typeof test === 'number') {
 */
 
 function evenOdd(num) {
-  if (num %2 === 0) {
+  if (num % 2 === 0) {
     console.log('This number is even!!');
   } else {
-    
+
     console.log('This number is odd!!');
   }
 }
@@ -138,14 +140,14 @@ evenOdd(num3);
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
   */
-  let val =10;
-  if (val < 5) {
-      console.log("Minore di 5");
-    } else if (val < 10) {
-      console.log("Minore di 10");
-    } else {
-      console.log("Uguale a 10 o maggiore");
-    }
+let val = 10;
+if (val < 5) {
+  console.log("Minore di 5");
+} else if (val < 10) {
+  console.log("Minore di 10");
+} else {
+  console.log("Uguale a 10 o maggiore");
+}
 
 
 /* ESERCIZIO 11
@@ -178,7 +180,7 @@ delete me.skills[2];
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
-const arr2= [];
+const arr2 = [];
 arr2.push(1);
 arr2.push(2);
 arr2.push(3);
