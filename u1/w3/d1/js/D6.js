@@ -26,7 +26,7 @@ let myArr = [];
 function randomArrNum() {
 
   for (let i = 0; i < 10; i++) {
-    let myRandom = Math.floor(Math.random() * 100);
+    let myRandom = Math.floor(Math.random() * 101);
     myArr.push(myRandom);
   }
   return myArr;
@@ -102,7 +102,7 @@ let myChart = [];
 
 function countChart(arr) {
 
-  myChart = arr.map((element) => element.lenght);
+  return myChart = arr.map((element) => element.lenght);
 }
 
 countChart(myArrStr);
