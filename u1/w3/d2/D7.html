@@ -219,64 +219,122 @@
 
     const generateTable = () => {
 
-      let myTableArea = document.querySelector('#tableArea');
-      let myTable = document.createElement('table');
 
-      let myRow1 = document.createElement('tr');
-      myRow1.innerHTML = 'immagine';
-      let myRow2 = document.createElement('tr');
-      myRow1.innerHTML = 'nome';
-      let myRow3 = document.createElement('tr');
-      myRow1.innerHTML = 'prodotto';
+      const generateTable = function () {
 
-      myTableArea.append(myTable);
-      myTable.append(myRow1);
-      myTable.append(myRow2);
-      myTable.append(myRow3);
-      console.dir(myRow1);
-    }
+        const tableArea = document.getElementById("tableArea");
 
-    generateTable();
-    /* ESERCIZIO 12
-     Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
-  */
+        const table = document.createElement('table');
+        const primaTr = document.createElement('tr');
 
-    const addRow = () => { }
+        const campi = ['immagine', 'nome prodotto', 'quantità', 'prezzo'];
 
-    /* ESERCIZIO 14
-    Crea una funzione che nasconda le immagini della tabella quando eseguita
-  */
+        for (let campo of campi) {
+          let th = document.createElement('th')
+          th.innerText = campo;
+          primaTr.append(th)
+        }
+        table.append(primaTr)
 
-    const hideAllImages = () => { }
+        //fine creazione intestazioni
+        //inizio creazione corpo tabella
 
-    /* EXTRA ESERCIZIO 15
-    Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
-  */
+        let dati = [
+          {
+            immagine: 'https://picsum.photos/200/300?random=1',
+            nomeProdotto: 'Lorem Ipsum1',
+            quantità: 10,
+            prezzo: 10
+          },
+          {
+            immagine: 'https://picsum.photos/200/300?random=2',
+            nomeProdotto: 'Lorem Ipsum2',
+            quantità: 1,
+            prezzo: 105
+          },
+          {
+            immagine: 'https://picsum.photos/200/300?random=3',
+            nomeProdotto: 'Lorem Ipsum3',
+            quantità: 180,
+            prezzo: 1
+          },
+          {
+            immagine: 'https://picsum.photos/200/300?random=4',
+            nomeProdotto: 'Lorem Ipsum4',
+            quantità: 80,
+            prezzo: 1056
+          },
+          {
+            immagine: 'https://picsum.photos/200/300?random=5',
+            nomeProdotto: 'Lorem Ipsum5',
+            quantità: 1054,
+            prezzo: 0
+          },
+        ]
 
-    const changeColorWithRandom = () => {
+        for (let prodotto of dati) {
 
-      let myH2 = document.querySelector('#changeMyColor');
+          const tr = document.createElement('tr');
 
-      myH2.addEventListener('click', () => {
-        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-        myH2.style.color = '#' + randomColor;
-      })
-    }
+          const tdImmagine = document.createElement('td');
+          const img = document.createElement('img');
+          img.src = prodotto.immagine;
+          tdImmagine.append(img);
+          //  versione dinamica
+          tr.append(tdImmagine);
 
-    changeColorWithRandom();
+          for (let prop in prodotto) {
+            if (prop != 'immagine') {
+              const td = document.createElement('td');
+              td.innerText = prodotto[prop];
+              tr.append(td)
+            }
+          }
+          tableArea.append(table);
 
-    /* EXTRA ESERCIZIO 16
-    Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
-  */
-    function removeVowels(str) {
-    return str.replace(/[aeiou]/gi, '');
-    }
+        }
 
-    const deleteVowels = () => {
+        generateTable();
+        /* ESERCIZIO 12
+         Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
+      */
 
-      let body = document.querySelector('body');
-      body.innerText = removeVowels(body.innerText);
-     }
+        const addRow = () => { }
+
+        /* ESERCIZIO 14
+        Crea una funzione che nasconda le immagini della tabella quando eseguita
+      */
+
+        const hideAllImages = () => { }
+
+        /* EXTRA ESERCIZIO 15
+        Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
+      */
+
+        const changeColorWithRandom = () => {
+
+          let myH2 = document.querySelector('#changeMyColor');
+
+          myH2.addEventListener('click', () => {
+            let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+            myH2.style.color = '#' + randomColor;
+          })
+        }
+
+        changeColorWithRandom();
+
+        /* EXTRA ESERCIZIO 16
+        Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
+      */
+        function removeVowels(str) {
+          return str.replace(/[aeiou]/gi, '');
+        }
+
+        const deleteVowels = () => {
+
+          let body = document.querySelector('body');
+          body.innerText = removeVowels(body.innerText);
+        }
 
     //  deleteVowels();
   </script>
