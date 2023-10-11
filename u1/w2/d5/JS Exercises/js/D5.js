@@ -95,9 +95,9 @@ function getLicense(a,b) {
     return newLincense;
 }
 
-let newLincense = getLicense(7,2);
 
 cars.forEach(element => {
+  let newLincense = getLicense(7,2);
   element.newLincensePlate = newLincense;
 });
 
