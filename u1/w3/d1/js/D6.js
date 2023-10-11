@@ -102,7 +102,7 @@ let myChart = [];
 
 function countChart(arr) {
 
-  return myChart = arr.map((element) => element.lenght);
+  return myChart = arr.map((element) => element.length);
 }
 
 countChart(myArrStr);
