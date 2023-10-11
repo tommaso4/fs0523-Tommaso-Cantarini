@@ -1,0 +1,40 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>To do list</title>
+</head>
+<body>
+    <main class="flex">
+        <section class="section-list item-list" >
+            <h1>TO DO LIST</h1>
+            <form action="create li">
+                <input id="text-input" type="text" placeholder="Write here your future plans">
+                <input id="btn-list" type="button" value="MAKE A NOTE">
+            </form>
+            <div class="list">
+                <ol id="my-list"></ol>
+            </div>
+        </section>
+        <section class="section-list delete-list">
+            <h1>DELETE LIST</h1>
+            <form action="delate li">
+                <input id="btn-delete" type="button" value="DELETE ITEM">
+            </form>
+            <div class="list">
+                <ol id="delete-list"></ol>
+            </div>
+        </section>
+    </main>
+    <footer class="flex">
+        <div>
+            <p>One Click for sign how that's made</p>
+            <p>DubleClick for move on delete list</p>
+        </div>
+    </footer>
+        
+
+    <script src="js/d3.js"></script>
+</body>
+</html>

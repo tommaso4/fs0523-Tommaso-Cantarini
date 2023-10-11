@@ -1,0 +1,93 @@
+body{
+    background-image: url(../img/appunti.png);
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+h1{
+    text-align: center;
+}
+
+.checked {
+    text-decoration: line-through;
+    color:brown;
+}
+
+.flex {
+    display: flex;
+    margin: 50px;
+    border-radius: 8px;
+    border: 3px solid  azure;
+    background-color: rgba(148, 101, 101, 0.727); 
+}
+
+.section-list {
+    border: 3px solid  azure;
+    border-radius: 8px;
+    margin: 50px;
+    padding: 25px;
+    width: 100%;
+}
+
+.delete-list{
+    background-color: rgba(34, 239, 171, 0.773);
+}
+
+.item-list{
+    background-color: rgba(163, 239, 0, 0.814);
+}
+
+#btn-delete, #btn-list {
+    padding: 15px 20px;
+    background-color: rgba(148, 101, 101, 0.89);
+    color: azure;
+    margin: 10px;
+    border-radius: 8px;
+    border: 1px solid  azure;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#btn-delete, #btn-list:hover{
+    cursor:pointer;
+}
+
+#text-input{
+    padding: 15px 10px;
+    border-radius: 8px;
+    border: 1px solid  azure;
+    background-color: rgba(148, 101, 101, 0.456);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+::placeholder {
+    color: azure;
+}
+
+.list {
+    background-color: rgba(148, 101, 101, 0.395); 
+    border-radius: 20px;
+    border: 1px solid  azure;
+
+}
+
+li{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px ;
+    padding: 5px;
+}
+
+li:hover {
+    background-color: rgba(144, 120, 120, 0.32); 
+    cursor: pointer;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    padding: 0 15px;
+    color: azure;
+    background-color: rgba(148, 101, 101, 0.727); 
+}
