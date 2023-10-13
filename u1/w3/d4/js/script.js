@@ -23,6 +23,9 @@ btnGeneratore.addEventListener('click', function () {
     }
 })
 
+for (const el of estratti) {
+    
+}
 
 console.log(estratti);
 
