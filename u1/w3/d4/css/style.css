@@ -14,7 +14,7 @@ h1{
     display: flex;
 }
 
-#tabellone {
+#tabellone, #tabellina {
     display: flex;
     flex-wrap: wrap;
     background-color: rgba(246, 189, 103, 0.699);
@@ -24,7 +24,7 @@ h1{
     padding: 20px;
 }
 
-.cella, .cella-estratti{
+.cella {
     text-align: center;
     flex: 0 1 calc(100% / 12);
     height: 50px;

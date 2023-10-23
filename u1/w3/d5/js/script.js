@@ -656,12 +656,15 @@ function addClass() {
 */
 
 function halfTree(n) {
-  let leaf = '*';
-  for (let i = 0; i < n; i++) {
-    leaf += '*' + 'br';
+  for (let i = 1; i <= n; i++) {
+    let row = '';
+    for (let j = 1; j <= n; j++) {
+      row += '*';
+    }
+    return console.log(row);
   }
-  return console.log(leaf);
 }
+
 
 halfTree(2);
 
