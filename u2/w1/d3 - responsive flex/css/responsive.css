@@ -50,7 +50,9 @@
 
 @media screen and (min-width: 1023px) {
     header{
-        position: sticky;
+        position: fixed ;
+        top: -10px;
+        left: 0;
         border-radius: 0;
         width: 20%;
         height: 100vh;
@@ -62,12 +64,14 @@
         justify-content: space-around;
         align-items: center;
         row-gap: 30px;
+    }
 
+    main, footer {
+        width: 75%;
+        float: right;
     }
 
     li{
-
-        /* flex: (1 1 auto); */
         box-sizing: border-box;
         padding: 30px 50px;
         width: 70%;
@@ -95,18 +99,32 @@
 
     /* --------------------- main---------------- */
 
-    section h2{
+    footer h3{
         text-align: left;
     }
 
     .selling-section{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         column-gap: 20px;
     }
+}
 
-    .selling{
-        flex: 1 1 calc(100% /3);
+/* --------------------------- desktop large ------------------ */
+
+@media screen and (min-width: 1439px) {
+
+    .latest-news{
+        display: flex;
     }
 
+    .img-footer{
+        order: -1;
+    }
+    .img-footer img{
+        width: 600px;
+        margin-right: 15px;
+    }
+
+    
 }

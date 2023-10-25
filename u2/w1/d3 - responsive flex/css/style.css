@@ -138,3 +138,7 @@ footer h3{
     padding: 10px 0;
 }
 
+li, button:hover{
+    cursor: pointer;
+}
+
