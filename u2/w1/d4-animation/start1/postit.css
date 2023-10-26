@@ -1,0 +1,55 @@
+/* background-image: linear-gradient(var(--giallo) 0%, var(--giallo) 75%, #bdbda3 90%, #bdbda3 100%);
+da Gabriele Iannuzzo a tutti:    2:08 PM
+background-image: linear-gradient(var(--verde) 0%, var(--verde) 75%, #a1b8a1 90%, #a1b8a1 100%);
+da Gabriele Iannuzzo a tutti:    2:08 PM
+background-image: linear-gradient(var(--viola) 0%, var(--viola) 75%, #8b8c9b 90%, #8b8c9b 100%); */
+
+.lavagna{
+    height: 500px;
+    width: 1800px;
+    background-color: rgba(178, 172, 172, 0.803);
+    margin: 40px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.post-it{
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    box-shadow: 5px 5px 15px grey;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+}
+
+.post-it h3{
+    font-size: 2rem;
+    margin: 10px;
+}
+
+.post-it p{
+    font-size: 1.4rem;
+    margin: 25px;
+}
+
+.yellow-post{
+    background-color: yellow;
+    transform: rotate(-10deg);
+}
+
+.green-post{
+    background-color: yellowgreen;
+    transform: rotate(18deg);
+}
+
+.pink-post{
+    background-color:plum;
+    transform: rotate(10deg);
+}
+
+.post-it:hover{
+    transform: rotate(0deg) scale(1.3,1.3);
+    box-shadow: 5px 5px grey;
+}
+
