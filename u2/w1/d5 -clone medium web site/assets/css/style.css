@@ -209,6 +209,11 @@ nav li a{
     flex: 1 1 40%;
 }
 
+.sticky{
+    position: sticky;
+    top: 120px;
+}
+
 .matters-aside p{
     font-size: 1rem;
     font-weight: bold;
