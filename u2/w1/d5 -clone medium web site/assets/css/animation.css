@@ -1,0 +1,48 @@
+.change-color-nav{
+    animation-name: changeColor;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    background-color: white;
+}
+
+.add-color-nav{
+    animation-name: addColor;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    background-color: #ffc017;
+}
+
+.change-color-btn{
+    animation-name: changeColor;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    background-color: green;
+}
+
+.add-color-btn{
+    animation-name: addColor;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    background-color: black;
+}
+
+
+@keyframes changeColor{
+    0% {background-color: #ffc017;}
+    100% {background-color: white;}
+}
+
+@keyframes addColor{
+    0% {background-color: white;}
+    100% {background-color: #ffc017;}
+}
+
+@keyframes changeColorBtn{
+    0% {background-color: black;}
+    100% {background-color: green;}
+}
+
+@keyframes addColorBtn{
+    0% {background-color: green;}
+    100% {background-color: black;}
+}

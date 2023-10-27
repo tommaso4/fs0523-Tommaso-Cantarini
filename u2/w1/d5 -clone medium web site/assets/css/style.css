@@ -29,8 +29,8 @@ nav{
     align-items: center;
     padding: 30px 80px;
     border-bottom: 1px solid  #191919;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    width: 90%;
 }
 
 nav ul{
@@ -57,7 +57,7 @@ nav li a{
     display: flex;
     background-color: #ffc017;
     padding-left: 80px;
-    border: 1px solid #191919;
+    border-bottom: 1px solid #191919;
 }
 
 .hero-left{
@@ -145,15 +145,11 @@ nav li a{
 }
 
 .conteiner-page{
-    padding: 20px 80px;
+    padding:80px;
 }
 
 .left-page{
-    flex: 1 1 70%;
-}
-
-.right-page{
-    flex: 1 1 30%;
+    flex: 1 1 50%;
 }
 
 .author-page{
@@ -187,7 +183,11 @@ nav li a{
     justify-content: space-between;
 }
 
-.topic-article{
+.date-page i {
+    font-size: 1.5rem;
+}
+
+.topic-article,.topics a{
     background-color: #F2F2F2;
     border-radius: 30px;
     padding: 2px 15px;
@@ -195,7 +195,55 @@ nav li a{
 
 .img-page img{
     width: 270px;
+    padding-left: 40px;
+}
+
+/* ----------------------- aside -------------- */
+
+.right-page{
+    flex: 1 1 40%;
+    margin-left: 100px;
+    
+}
+
+.matters-aside p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.topics a{
+    flex: 1 0 auto;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    line-height: 1.5rem;
+}
+
+.a-green a{
+    color: green;
+    font-size: 1.2rem;
+}
+
+.a-green{
+    padding: 30px 0 60px 0;
+    border-bottom: 1px solid #6b6b6b1d ;
 }
 
 
+.aside-footer{
+    padding: 20px 0;
+    padding-right: 80px;
+}
+
+.aside-footer a{
+    color: #6B6B6B;
+    padding: 30px 10px;
+    line-height: 2.5rem;
+}
 
