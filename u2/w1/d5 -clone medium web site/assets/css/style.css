@@ -107,7 +107,8 @@ nav li a{
 
 .author img{
    width: 30px;
-   padding-right: 25px;
+   margin-right: 25px;
+   border-radius: 50%;
 }
 
 .author a{
@@ -119,6 +120,7 @@ nav li a{
     color: #F2F2F2;
     font-weight: bold;
     padding-right: 30px;
+    padding-top: 15px;
 }
 
 .date-article p{
@@ -201,9 +203,8 @@ nav li a{
 /* ----------------------- aside -------------- */
 
 .right-page{
-    flex: 1 1 40%;
     margin-left: 100px;
-    
+    flex: 1 1 40%;
 }
 
 .matters-aside p{
