@@ -2,11 +2,9 @@
     --bs-navbar-color: 171, 240, 240;
 }
 
-.saldi{
-    padding: 0;
-    margin: 0;
+*{
+    max-width: 100%;
 }
-
 
 .nav-logo-img img{
     width: 45px;
