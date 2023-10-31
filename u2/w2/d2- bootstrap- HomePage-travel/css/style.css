@@ -2,10 +2,6 @@
     --bs-navbar-color: 171, 240, 240;
 }
 
-*{
-    max-width: 100%;
-}
-
 .nav-logo-img img{
     width: 45px;
     height: 45px;
