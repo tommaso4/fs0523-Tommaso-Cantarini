@@ -6,3 +6,15 @@
     width: 45px;
     height: 45px;
 }
+
+.saldi, .last-minute{
+    background-color: aquamarine;
+}
+
+.welcome-page, .recensioni{
+    background-color: rgb(51, 51, 246);
+}
+
+.day-discount{
+    background-color: orangered;
+}
