@@ -9,7 +9,22 @@
 </head>
 
 <body>
-
+    <div class="btn-group btn-group-sm d-flex align-items-center" role="group" aria-label="Small button group">
+        <div class="col-6 ms-3">
+            <P> Do you want to know how many journeys are in this web-site?</P>
+        </div>
+        <div class="col-6">
+            <button class="btn btn-outline-primary m-2" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseExampleAllert" aria-expanded="false" aria-controls="collapseExample">
+                CLICK ME
+            </button>
+        </div>
+    </div>
+    <div class=" collapse" id="collapseExampleAllert">
+        <div class="alert alert-primary" role="alert">
+            <p>Sono disponibili <span id="num-journey"></span> viaggi!</p>
+        </div>
+    </div>
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary  px-lg-5">
             <div class="container-fluid nav-logo-img">
@@ -55,41 +70,53 @@
         </section>
         <section class="saldi py-3 py-lg-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-6 col-lg-3 col-md-4 ">
-                        <div class="card border-2 border-info ">
-                            <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
-                            <div class="card-body">
-                                <p class="card-text">Ericeira the best place where you can practice advance surf.</p>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                    <button class="btn btn-outline-primary m-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample6" aria-expanded="false" aria-controls="collapseExample">
+                        Show/Hide item!
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample6">
+                    <div class="row">
+                        <div class="col-6 col-lg-3 col-md-4 ">
+                            <div class="card border-2 border-info ">
+                                <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
+                                <div class="card-body">
+                                    <p class="card-text">Ericeira the best place where you can practice advance surf.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                             </div>
-                            <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                         </div>
-                    </div>
-                    <div class="col-6 col-lg-3 col-md-4">
-                        <div class="card border-2 border-info ">
-                            <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
-                            <div class="card-body">
-                                <p class="card-text">Ericeira the best place where you can practice advance surf.</p>
+                        <div class="col-6 col-lg-3 col-md-4">
+                            <div class="card border-2 border-info ">
+                                <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
+                                <div class="card-body">
+                                    <p class="card-text">Ericeira the best place where you can practice advance surf.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                             </div>
-                            <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4  d-none d-md-block">
-                        <div class="card border-2 border-info ">
-                            <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
-                            <div class="card-body">
-                                <p class="card-text">Ericeira the best place where you can practice advance surf.</p>
+                        <div class="col-lg-3 col-md-4  d-none d-md-block">
+                            <div class="card border-2 border-info ">
+                                <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
+                                <div class="card-body">
+                                    <p class="card-text">Ericeira the best place where you can practice advance surf.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                             </div>
-                            <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                         </div>
-                    </div>
-                    <div class="col-lg-3 d-none d-lg-block">
-                        <div class="card border-2 border-info ">
-                            <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
-                            <div class="card-body">
-                                <p class="card-text">Ericeira the best place where you can practice advance surf.</p>
+                        <div class="col-lg-3 d-none d-lg-block">
+                            <div class="card border-2 border-info ">
+                                <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
+                                <div class="card-body">
+                                    <p class="card-text">Ericeira the best place where you can practice advance surf.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                             </div>
-                            <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                         </div>
                     </div>
                 </div>
@@ -97,59 +124,73 @@
         </section>
         <section class="welcome-page py-3 py-lg-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-2 col-lg-4 col-6">
-                        <div class="card border-2 border-info shadow-lg">
-                            <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
-                            <div class="card-body">
-                                <p class="card-text">Ericeira the best place where you can practice advance surf.</p>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                    <button class="btn btn-outline-primary m-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample">
+                        Show/Hide item!
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample5">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-4 col-6 nr-journey">
+                            <div class="card border-2 border-info shadow-lg">
+                                <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
+                                <div class="card-body">
+                                    <p class="card-text">Ericeira the best place where you can practice advance surf.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                             </div>
-                            <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                         </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-6">
-                        <div class="card border-2 border-info shadow-lg">
-                            <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
-                            <div class="card-body">
-                                <p class="card-text">Ericeira the best place where you can practice advance surf.</p>
+                        <div class="col-xl-2 col-lg-4 col-6 nr-journey">
+                            <div class="card border-2 border-info shadow-lg">
+                                <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
+                                <div class="card-body">
+                                    <p class="card-text">Ericeira the best place where you can practice advance surf.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                             </div>
-                            <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                         </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-6 d-none d-lg-block">
-                        <div class="card border-2 border-info  shadow-lg">
-                            <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
-                            <div class="card-body">
-                                <p class="card-text">Ericeira the best place where you can practice advance surf.</p>
+                        <div class="col-xl-2 col-lg-4 col-6 d-none d-lg-block nr-journey">
+                            <div class="card border-2 border-info  shadow-lg">
+                                <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
+                                <div class="card-body">
+                                    <p class="card-text">Ericeira the best place where you can practice advance surf.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                             </div>
-                            <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                         </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block">
-                        <div class="card border-2 border-info  shadow-lg">
-                            <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
-                            <div class="card-body">
-                                <p class="card-text">Ericeira the best place where you can practice advance surf.</p>
+                        <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block nr-journey">
+                            <div class="card border-2 border-info  shadow-lg">
+                                <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
+                                <div class="card-body">
+                                    <p class="card-text">Ericeira the best place where you can practice advance surf.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                             </div>
-                            <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                         </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block">
-                        <div class="card border-2 border-info shadow-lg ">
-                            <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
-                            <div class="card-body">
-                                <p class="card-text">Ericeira the best place where you can practice advance surf.</p>
+                        <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block nr-journey">
+                            <div class="card border-2 border-info shadow-lg ">
+                                <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
+                                <div class="card-body">
+                                    <p class="card-text">Ericeira the best place where you can practice advance surf.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                             </div>
-                            <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                         </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block">
-                        <div class="card border-2 border-info shadow-lg ">
-                            <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
-                            <div class="card-body">
-                                <p class="card-text">Ericeira the best place where you can practice advance surf.</p>
+                        <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block nr-journey">
+                            <div class="card border-2 border-info shadow-lg ">
+                                <img src="img/ericeira-portugal.jpg" class="card-img-top" alt="img">
+                                <div class="card-body">
+                                    <p class="card-text">Ericeira the best place where you can practice advance surf.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                             </div>
-                            <button type="button" class="btn btn-primary m-2">Prenota Ora</button>
                         </div>
                     </div>
                 </div>
@@ -157,17 +198,29 @@
         </section>
         <section class="day-discount py-4 d-none d-md-block">
             <div class="container">
-                <div class="card">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <img src="img/ericeira-portugal.jpg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card-body">
-                                <h3 class="card-title text-center py-3">Ericeira</h3>
-                                <p class="card-text py-3">Ericeira the best place where you can practice advance surf.</p>
-                                <p class="card-text text-center"><small class="text-body-secondary">12/10 to 30/10</small></p>
-                                <p class="card-text"><small class="font-monospace">1200$ included plane and transfert</small></p>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                    <button class="btn btn-outline-primary m-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample">
+                        Show/Hide item!
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample4">
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <img src="img/ericeira-portugal.jpg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center py-3">Ericeira</h3>
+                                    <p class="card-text py-3">Ericeira the best place where you can practice advance
+                                        surf.
+                                    </p>
+                                    <p class="card-text text-center"><small class="text-body-secondary">12/10 to
+                                            30/10</small></p>
+                                    <p class="card-text"><small class="font-monospace">1200$ included plane and
+                                            transfert</small></p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -176,74 +229,109 @@
         </section>
         <section class="last-minute p-4">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-2 col-lg-4 col-6 ">
-                         <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-6 ">
-                         <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-6 d-none d-lg-block ">
-                        <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block ">
-                        <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block ">
-                        <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
-                    </div>
-                    <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block ">
-                        <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
+                <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                    <button class="btn btn-outline-primary m-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample">
+                        Show/Hide item!
+                    </button>
+                </div>
+                <div class="collapse" id="collapseExample3">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-4 col-6 ">
+                            <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-6 ">
+                            <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-6 d-none d-lg-block ">
+                            <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block ">
+                            <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block ">
+                            <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
+                        </div>
+                        <div class="col-xl-2 col-lg-4 col-6 d-none d-xl-block ">
+                            <img class="w-100 rounded shadow-lg" src="img/ericeira-portugal.jpg" alt="img">
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="recensioni">
             <div class="container">
-                <div class="row bg-light p-2">
-                    <div class="col-3">
-                        <img class="w-100 pt-2 rounded-circle " src="img/detailed-travel-logo_23-2148616611.avif" alt="">
-                    </div>
-                    <div class="col-9">
-                        <h3>Agency</h3>
-                        <p>Perfect organization</p>
-                    </div>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                    <button class="btn btn-outline-primary m-2" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+                        Show/Hide item!
+                    </button>
                 </div>
-                <div class="row bg-light p-2">
-                    <div class="col-3">
-                        <img class="w-100 pt-2 rounded-circle " src="img/detailed-travel-logo_23-2148616611.avif" alt="">
+                <div class="collapse" id="collapseExample2">
+                    <div class="row bg-light p-2">
+                        <div class="col-3">
+                            <img class="w-100 pt-2 rounded-circle " src="img/detailed-travel-logo_23-2148616611.avif"
+                                alt="">
+                        </div>
+                        <div class="col-9">
+                            <h3>Agency</h3>
+                            <p>Perfect organization</p>
+                        </div>
                     </div>
-                    <div class="col-9">
-                        <h3>Agency</h3>
-                        <p>Perfect organization</p>
+                    <div class="row bg-light p-2">
+                        <div class="col-3">
+                            <img class="w-100 pt-2 rounded-circle " src="img/detailed-travel-logo_23-2148616611.avif"
+                                alt="">
+                        </div>
+                        <div class="col-9">
+                            <h3>Agency</h3>
+                            <p>Perfect organization</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer class=" bg-dark text-light">
+
         <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="col-6">
-                    <h4>Viaggi.it</h4>
+            <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+                <button class="btn btn-outline-primary m-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Show/Hide item!
+                </button>
+            </div>
+            <div class=" collapse" id="collapseExample">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="col-6">
+                        <h4>Viaggi.it</h4>
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <button type="button" class="btn btn-primary m-2 " data-bs-toggle="collapse"
+                        data-bs-target="#collapseExampleForm" aria-expanded="false" aria-controls="collapseExample">
+                        Contattaci</button>
+                    </div>
                 </div>
-                <div class="col-6 d-flex justify-content-end">
-                    <button type="button" class="btn btn-primary m-2 ">Contattaci</button>
+            </div>
+            <div class=" collapse" id="collapseExampleForm">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com">
+                </div>
+                <div class="pb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Dicci come possiamo aiutarti</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
             </div>
         </div>
     </footer>
     <script src="../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 <!-- 
-12) Crea un bottone vicino ad ogni sezione per collassarla e riaprirla se premuto.
 
-13) Crea la possibilità di contare il numero di "viaggi" presenti sulla pagina e visualizzare il risultato in un alert.
-
-14) Crea un modale con un campo email e un messaggio.
-
-15) Quando l'utente cliccherà su "Contattaci", il modale dovrà essere visualizzato.
 
 16) Crea una funzione che aggiunga un badge con la scritta "HOT" su ognuna delle offerte "Welcome Summer" posizionato in alto a destra.
 
