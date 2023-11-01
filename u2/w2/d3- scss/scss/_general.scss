@@ -1,0 +1,18 @@
+
+
+@mixin flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin noDecoration{
+    text-decoration: none;
+    list-style: none;
+}
+
+@mixin genBtn{
+    border-radius: 10px;
+    color: $testo;
+}
+

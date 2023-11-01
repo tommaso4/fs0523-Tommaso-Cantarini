@@ -1,0 +1,5 @@
+@mixin rotBtn{
+    transition-duration: 0.5s;
+    transform: rotate(360deg);
+    cursor: pointer;
+}

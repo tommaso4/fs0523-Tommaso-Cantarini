@@ -1,0 +1,72 @@
+@import 'reset';
+@import 'color-font';
+@import 'general';
+@import 'spacing';
+@import 'animation';
+
+header {
+    background-color: $bg_header;
+}
+
+.navFlex,
+.btn-container {
+    @include flexCenter;
+
+    li {
+        @include noDecoration;
+        @include p-m-3;
+        a { 
+            @include noDecoration;
+            color: $testo;
+        }
+    }
+}
+
+nav h1{
+    @include fontH;
+    font-size: $fontH1
+}
+
+.btn-header {
+    @include genBtn;
+    margin-bottom: $pb-2;
+    @include p-m-3;
+}
+
+.btn-header:hover{
+    @include rotBtn;
+}
+
+header h2{
+    @include fontH;
+    font-size: $fontH2;
+}
+
+.btn1{
+    background-color: $button-blue;
+}
+
+.btn2{
+    background-color: $button-oran;
+}
+
+.btn3{
+    background-color: $button-green;
+}
+
+.hero{
+    background: $bg_hero;
+    display: flex;
+    color: $testo;
+}
+
+.hero img{
+    width: 20rem;
+    margin: 2rem 1rem;
+}
+
+.hero p {
+    margin: 2rem 1rem;
+    font-size: 1.3rem;
+}
+
