@@ -1,0 +1,31 @@
+$blue: #0e6cff ;
+$oran:#ff8700;
+$green: #4caf50;
+$colorsBtn : $blue, $oran, $green;
+
+// @each $cl in $colorsBtn{
+//     .btn-#{$cl}{
+//         background-color: $cl;
+//         @include genBtnNav;
+//         @include rotBtn;
+//     }
+// }
+
+.btn-blue{
+    background-color: $blue;
+    &:hover{
+        @include hoverBtn;
+    }
+}
+.btn-oran{
+    background-color: $oran;
+    &:hover{
+        @include hoverBtn;
+    }
+}
+.btn-green{
+    background-color: $green;
+    &:hover{
+        @include hoverBtn;
+    }
+}

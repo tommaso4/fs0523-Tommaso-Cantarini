@@ -1,0 +1,303 @@
+/* CSS Reset */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    top: 400px;
+  }
+  25% {
+    top: 300px;
+  }
+  50% {
+    top: 150px;
+  }
+  75% {
+    top: 120px;
+  }
+  100% {
+    top: 100px;
+  }
+}
+.btn-blue {
+  background-color: #0e6cff;
+}
+.btn-blue:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.btn-oran {
+  background-color: #ff8700;
+}
+.btn-oran:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.btn-green {
+  background-color: #4caf50;
+}
+.btn-green:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mr-30 {
+  margin-right: 30px;
+}
+
+.ml-30 {
+  margin-left: 30px;
+}
+
+.m-30 {
+  margin: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mr-40 {
+  margin-right: 40px;
+}
+
+.ml-40 {
+  margin-left: 40px;
+}
+
+.m-40 {
+  margin: 40px;
+}
+
+.pt-10 {
+  padding-top: 10px;
+}
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
+.pl-10 {
+  padding-left: 10px;
+}
+
+.pr-10 {
+  padding-right: 10px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pl-20 {
+  padding-left: 20px;
+}
+
+.pr-20 {
+  padding-right: 20px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.pt-30 {
+  padding-top: 30px;
+}
+
+.pb-30 {
+  padding-bottom: 30px;
+}
+
+.pl-30 {
+  padding-left: 30px;
+}
+
+.pr-30 {
+  padding-right: 30px;
+}
+
+.p-30 {
+  padding: 30px;
+}
+
+.pt-40 {
+  padding-top: 40px;
+}
+
+.pb-40 {
+  padding-bottom: 40px;
+}
+
+.pl-40 {
+  padding-left: 40px;
+}
+
+.pr-40 {
+  padding-right: 40px;
+}
+
+.p-40 {
+  padding: 40px;
+}
+
+.col-5 {
+  width: 40%;
+}
+
+.col-7 {
+  width: 60%;
+}
+
+body {
+  color: #f4f4f4;
+  font-size: 1.3rem;
+}
+
+nav ul {
+  display: flex;
+}
+
+a, li {
+  text-decoration: none;
+  list-style: none;
+  color: #f4f4f4;
+}
+
+.d-fl-btw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav, .hero {
+  background-color: #640fc5;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.hero img {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.col-7 {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  animation-name: fadeIn;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+}/*# sourceMappingURL=style.css.map */

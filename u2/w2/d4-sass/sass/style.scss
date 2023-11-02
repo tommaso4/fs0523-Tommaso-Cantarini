@@ -1,0 +1,56 @@
+@import 'reset';
+@import 'colors';
+@import 'animations';
+@import 'buttons';
+@import 'fonts';
+@import 'spacing';
+@import 'mixins';
+
+body {
+    @include generalFont;
+}
+
+nav ul {
+    display: flex
+}
+
+a, li{
+    @include noDecoration;
+    color: $testo
+}
+
+.d-fl-btw{
+    @include flexBetween;
+}
+
+nav, .hero{
+    background-color: $bg_hero;
+}
+
+.hero{
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.hero h1{
+    @include heroH1;
+}
+
+.hero img{
+    @include heroImg;
+}
+
+.col-7{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    @include fadeIn;
+}
+
+
+
+
+
+

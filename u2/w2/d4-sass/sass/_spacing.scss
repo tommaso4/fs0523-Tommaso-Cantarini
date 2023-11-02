@@ -1,0 +1,47 @@
+$misure: 10, 20, 30, 40;
+
+@each $m in $misure{
+    .mt-#{$m}{
+        margin-top: $m + px;
+    }
+    .mb-#{$m}{
+        margin-bottom: $m + px;
+    }
+    .mr-#{$m}{
+        margin-right: $m + px;
+    }
+    .ml-#{$m}{
+        margin-left: $m + px;
+    }
+    .m-#{$m}{
+        margin: $m + px;
+    }
+}
+
+@each $p in $misure{
+    .pt-#{$p}{
+        padding-top: $p + px;
+    }
+    .pb-#{$p}{
+        padding-bottom: $p + px;
+    }
+    .pl-#{$p}{
+        padding-left: $p + px;
+    }
+    .pr-#{$p}{
+        padding-right: $p + px;
+    }
+    .p-#{$p}{
+        padding: $p + px;
+    }
+}
+
+
+.col-5{
+    width: 40%;
+}
+
+.col-7{
+    width:60%;
+}
+

@@ -1,0 +1,20 @@
+@mixin hoverBtn{
+    transition-duration: 0.3s;
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+@mixin fadeIn{
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-delay: 0;
+}
+
+@keyframes fadeIn{
+        0% {top: 400px;}
+        25% {top: 300px;}
+        50% {top: 150px;}
+        75% {top: 120px;}
+        100% {top: 100px;}
+    }
