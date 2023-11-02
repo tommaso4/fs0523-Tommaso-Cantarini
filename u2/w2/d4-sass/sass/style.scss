@@ -40,11 +40,13 @@ nav, .hero{
 
 .hero img{
     @include heroImg;
+    @include sdw-border;
 }
 
 .col-7{
     position: absolute;
-    top: 100px;
+    box-sizing: border-box;
+    top: 0;
     right: 0;
     @include fadeIn;
 }

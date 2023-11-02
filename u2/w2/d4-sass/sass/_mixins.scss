@@ -24,7 +24,10 @@
 @mixin heroImg{
     width: 100%;
     box-sizing: border-box;
-    padding: 20px;
-    margin-top: 50px;
+}
+
+@mixin sdw-border{
+    box-shadow: 5px 10px 18px rgb(56, 55, 55);
+    border: 2px solid rgb(157, 157, 157);
 }
 
