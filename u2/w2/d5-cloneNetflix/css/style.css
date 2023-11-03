@@ -11855,12 +11855,23 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.cl-font1 {
+  color: #BEC3C5;
+}
+
 #logo img {
   width: 5rem;
 }
 
 .nav-item a:hover {
   color: white;
+}
+
+@media screen and (max-width: 769px) {
+  .my-li-last {
+    width: 20%;
+    border-bottom: 1px solid #BEC3C5;
+  }
 }
 
 .my-ul a {
@@ -11876,4 +11887,17 @@ textarea.form-control-lg {
   height: 25px;
   background-position: center;
   background-size: contain;
+}
+
+.my-select-header {
+  background-color: black;
+  color: #BEC3C5;
+  border: 1px solid #BEC3C5;
+  text-align: center;
+  padding: 4px 0;
+  padding-bottom: 4px;
+}
+
+.my-icon-dwn-nav {
+  border: 1px solid #BEC3C5;
 }/*# sourceMappingURL=style.css.map */

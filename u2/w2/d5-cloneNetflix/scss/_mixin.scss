@@ -1,0 +1,16 @@
+@mixin img-profile-nav{
+    background-image: url(../Netflix-assets/assets/avatar.png);
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-size: contain;
+}
+
+@mixin my-select-header{
+    background-color: black;
+    color: $gray-100;
+    border: 1px solid $gray-100;
+    text-align: center;
+    padding: 4px 0;
+    padding-bottom: 4px;
+}

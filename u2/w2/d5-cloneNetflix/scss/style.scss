@@ -1,5 +1,10 @@
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'mixin';
+
+.cl-font1{
+    color: $gray-100;
+}
 
 #logo{
     img{
@@ -11,6 +16,13 @@
     color: white;
 }
 
+.my-li-last{
+    @media screen and (max-width: 769px){
+        width: 20%;
+        border-bottom: 1px solid $gray-100;
+    };
+}
+
 .my-ul a{
     color: $gray-100;
     &:hover{
@@ -19,10 +31,14 @@
 }
 
 .img-profile{
-    background-image: url(../Netflix-assets/assets/avatar.png);
-    width: 25px;
-    height: 25px;
-    background-position: center;
-    background-size: contain;
+    @include img-profile-nav;
+}
+
+.my-select-header{
+    @include my-select-header;
+}
+
+.my-icon-dwn-nav{
+    border: 1px solid $gray-100;
 }
 
