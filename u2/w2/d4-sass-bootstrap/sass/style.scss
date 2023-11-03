@@ -4,8 +4,12 @@
     @include imgSize;
 }
 
-.dot-img{
-    @include dot-img;
+.dot-img-green{
+    @include dot-img(green);
+}
+
+.dot-img-purp{
+    @include dot-img(rgb(155, 6, 147));
 }
 
 .my-bi-bell{

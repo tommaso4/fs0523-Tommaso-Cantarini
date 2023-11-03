@@ -7,12 +7,13 @@
     background-size: contain;
 }
 
-@mixin dot-img{
+@mixin dot-img($prop){
     width: 10px;
     height: 10px;
     border-radius: 50%;
     position: absolute;    
     border: 2px solid white;
+    background-color: $prop;
 }
 
 @mixin dot-dwn{
