@@ -1,3 +1,4 @@
+@import '../node_modules/bootstrap/scss/functions';
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import 'mixin';
@@ -41,4 +42,17 @@
 .my-icon-dwn-nav{
     border: 1px solid $gray-100;
 }
+
+.my-btn-nav{
+    @include my-btn-nav(25px, 25px, 15px, 0, 15px);
+}
+
+.my-span-nav{
+    @include my-btn-nav(20px, 20px, 2px, 5px, 6px);
+}
+
+.my-caros > *{
+    padding: 0;
+}
+
 

@@ -14,3 +14,13 @@
     padding: 4px 0;
     padding-bottom: 4px;
 }
+
+
+@mixin my-btn-nav($pw, $ph, $p, $r, $t){
+        width: $pw;
+        height: $ph;
+        position: absolute;
+        padding: $p;
+        right: $r;
+        top: $t;
+}
