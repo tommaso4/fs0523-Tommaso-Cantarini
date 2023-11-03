@@ -1,2 +1,28 @@
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+#logo{
+    img{
+        width: 5rem;
+    }
+}    
+
+.nav-item a:hover{
+    color: white;
+}
+
+.my-ul a{
+    color: $gray-100;
+    &:hover{
+        color: white;
+    }
+}
+
+.img-profile{
+    background-image: url(../Netflix-assets/assets/avatar.png);
+    width: 25px;
+    height: 25px;
+    background-position: center;
+    background-size: contain;
+}
+
