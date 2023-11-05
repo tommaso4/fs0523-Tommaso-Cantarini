@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloneNetflix</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
+</head>
+
+<body class=" bg-black cl-font1">
+    <div class="container-fluid">
+        <header class="mb-4">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid" id="logo">
+                    <a class="navbar-brand" href="#"><img src="Netflix-assets/assets/netflix_logo.png"
+                            alt="Netflix Logo"></a>
+                    <button class="navbar-toggler my-btn-nav" type="button" data-bs-toggle="collapse"
+                        data-bs-theme="dark" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon my-span-nav"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 my-ul">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Tv Shows</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Movies</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Recently</a>
+                            </li>
+                            <li class="nav-item my-li-last">
+                                <a class="nav-link" href="#">My List</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav mb-2 mb-lg-0 my-ul">
+                            <li class="nav-item me-2">
+                                <a class="nav-link" aria-current="page" href="#"><i class="bi bi-search"></i></a>
+                            </li>
+                            <li class="nav-item d-none d-lg-block me-2">
+                                <a class="nav-link" aria-current="page" href="#">KIDS</a>
+                            </li>
+                            <li class="nav-item d-none d-lg-block me-2">
+                                <a class="nav-link" aria-current="page" href="#"><i class="bi bi-bell-fill"></i></a>
+                            </li>
+                            <li class="nav-item me-2">
+                                <div class=" mt-lg-2 ms-lg-2 img-profile">
+                                </div>
+                            </li>
+                            <li class="nav-item d-none d-lg-block">
+                                <a class="nav-link" aria-current="page" href="#"><i
+                                        class="bi bi-caret-down-fill"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-fluid ms-2">
+                <div class="d-flex justify-content-between aling-items-center">
+                    <div class="col6">
+                        <h3 class="d-none d-lg-inline-block me-3">Tv Shows</h3>
+                        <select name="films" class="my-select-header">
+                            <option value="Genres">Genres</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Horro">Horro</option>
+                            <option value="Fantasy">Fantasy</option>
+                        </select>
+                    </div>
+                    <div class="d-none d-lg-flex col6 me-3">
+                        <div class="my-auto p-1 my-icon-dwn-nav">
+                            <i class="bi bi-text-left"></i>
+                        </div>
+                        <div class="my-auto p-1 my-icon-dwn-nav">
+                            <i class="bi bi-grid"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="container-fluid ms-3 ">
+            <div class="conteiner-fluid">
+                <h6 class="pb-1">Trending Now</h6>
+                <div class=" position-relative ">
+                    <div class="row my-caros">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media0.webp" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-md-block  col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media6.jpg" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-md-block  col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media2.webp" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-md-block  col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media3.webp" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-lg-block col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media4.jpg" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-lg-block col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media5.webp" alt="film">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-absolute top-50 start-0 translate-middle-y">
+                        <i class="bi bi-chevron-left arr-stl"></i>
+                    </div>
+                    <div class="position-absolute top-50 end-0 translate-middle-y">
+                        <i class="bi bi-chevron-right arr-stl"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="conteiner-fluid mt-4 mb-4">
+                <h6 class="pb-1">Whatch It Again</h6>
+                <div class=" position-relative ">
+                    <div class="row my-caros">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media7.webp" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-md-block  col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media8.webp" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-md-block  col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media9.jpg" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-md-block  col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media10.jpg" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-lg-block col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media11.jpg" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-lg-block col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media12.jpg" alt="film">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-absolute top-50 start-0 translate-middle-y">
+                        <i class="bi bi-chevron-left arr-stl"></i>
+                    </div>
+                    <div class="position-absolute top-50 end-0 translate-middle-y">
+                        <i class="bi bi-chevron-right arr-stl"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="conteiner-fluid">
+                <h6 class="pb-1">New Realises</h6>
+                <div class=" position-relative ">
+                    <div class="row my-caros">
+                        <div class="col-12 col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media13.jpg" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-md-block  col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media14.webp" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-md-block  col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media15.jpg" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-md-block  col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media16.webp" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-lg-block col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media17.jpg" alt="film">
+                            </div>
+                        </div>
+                        <div class="col-12 d-none d-lg-block col-md-3 col-lg-2">
+                            <div class="caro-item">
+                                <img class="img-fluid" src="Netflix-assets/assets/media/media18.jpg" alt="film">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-absolute top-50 start-0 translate-middle-y">
+                        <i class="bi bi-chevron-left arr-stl"></i>
+                    </div>
+                    <div class="position-absolute top-50 end-0 translate-middle-y">
+                        <i class="bi bi-chevron-right arr-stl"></i>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="container-fluid ms-3 mt-5">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="social-footer d-flex">
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-twitter"></i>
+                        <i class="bi bi-youtube"></i>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <div class="pb-2 pt-2">
+                            <a href="#" class="">Audio and Subtitles</a>
+                        </div>
+                        <div class="pb-2">
+                            <a href="#">Media Center</a>
+                        </div>
+                        <div class="pb-2">
+                            <a href="#">Privacy</a>
+                        </div>
+                        <div class="pb-2">
+                            <a href="#">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-3">
+                        <div class="pb-2">
+                            <a href="#">Audio Description</a>
+                        </div>
+                        <div class="pb-2">
+                            <a href="#">Investor Relations</a>
+                        </div>
+                        <div class="pb-2">
+                            <a href="#">Legal Notices</a>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-3">
+                        <div class="pb-2">
+                            <a href="#">Help Center</a>
+                        </div>
+                        <div class="pb-2">
+                            <a href="#">Jobs</a>
+                        </div>
+                        <div class="pb-2">
+                            <a href="#">Cookkie Preferences</a>
+                        </div>
+                    </div>
+                    <div class="d-none d-lg-block col-lg-3">
+                        <div class="pb-2">
+                            <a href="#">Gift Cards</a>
+                        </div>
+                        <div class="pb-2">
+                            <a href="#">Terms of Use</a>
+                        </div>
+                        <div class="pb-2">
+                            <a href="#">Corporate Information</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="end-footer">
+                    <button class="mb-2">Service Code</button>
+                    <p> &copy; 1997-2019 Netflix, inc. {i,0d00fcda2fd9c0de} </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

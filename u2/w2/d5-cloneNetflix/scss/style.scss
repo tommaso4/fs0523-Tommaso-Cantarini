@@ -3,56 +3,171 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import 'mixin';
 
-.cl-font1{
+.cl-font1 {
     color: $gray-100;
 }
 
-#logo{
-    img{
-        width: 5rem;
+#logo {
+    img {
+        width: 7rem;
     }
-}    
-
-.nav-item a:hover{
-    color: white;
 }
 
-.my-li-last{
-    @media screen and (max-width: 769px){
+.my-li-last {
+    @media screen and (max-width: 769px) {
         width: 20%;
         border-bottom: 1px solid $gray-100;
-    };
+    }
+
+    ;
 }
 
-.my-ul a{
+.my-ul a,
+footer a,
+.nav-item a,
+.my-icon-dwn-nav i,
+.social-footer i {
+    text-decoration: none;
     color: $gray-100;
-    &:hover{
+
+    &:hover {
         color: white;
+        cursor: pointer;
     }
 }
 
-.img-profile{
+.img-profile {
     @include img-profile-nav;
 }
 
-.my-select-header{
+.my-select-header {
     @include my-select-header;
 }
 
-.my-icon-dwn-nav{
+.my-icon-dwn-nav {
     border: 1px solid $gray-100;
 }
 
-.my-btn-nav{
+.my-btn-nav {
     @include my-btn-nav(25px, 25px, 15px, 0, 15px);
 }
 
-.my-span-nav{
+.my-span-nav {
     @include my-btn-nav(20px, 20px, 2px, 5px, 6px);
 }
 
-.my-caros > *{
+.my-caros>* {
     padding: 0;
 }
 
+.arr-stl {
+    font-size: 1.8rem;
+    color: $gray-100;
 
+    &:hover {
+        color: white;
+        font-size: 2.3rem;
+        cursor: pointer;
+    }
+}
+
+.social-footer i {
+    font-size: 1.4rem;
+    padding-right: 10px;
+}
+
+.end-footer button {
+    @include btn-footer;
+}
+
+.end-footer p {
+    font-size: 0.8rem;
+}
+
+.footer-container,
+.main-edit {
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+// ---------------------------------- Edit Profile ---------------------------------
+
+.main-edit h1 {
+    font-size: 3rem;
+
+    @media screen and (min-width: 1023px) {
+        font-size: 4rem;
+    }
+}
+
+.my-bord-b {
+    border-bottom: 1px solid#303030;
+}
+.my-bord-t {
+    border-top: 1px solid#303030;
+}
+
+.img-edit {
+    position: relative;
+    img {
+        width: 80px;
+        border-radius: 10px;
+    }
+
+    .edit-icon{
+        @include icon-edit;
+    }
+}
+
+.user-inp-text {
+    @include input-user;
+}
+
+.h6-special {
+    background-color: $h6-special;
+
+    @media screen and (min-width: 1023px) {
+        width: 60%;
+    }
+}
+
+.btn-profile {
+    @include btn-footer;
+}
+
+.custom-checkbox {
+    position: relative;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox label {
+    @include user-checkbox;
+}
+
+.custom-checkbox label::before {
+    @include user-checkbox-before;
+}
+
+.custom-checkbox input[type="checkbox"]:checked+label::before {
+    opacity: 1;
+}
+
+.my-btn-user {
+    @include btn-footer;
+    padding-top: 4px;
+    font-size: 1.2rem;
+}
+
+// -------------------------------------- Setting Page ----------------------------
+
+.main-settings{
+    width: 60%;
+    margin: 0 auto;
+}
