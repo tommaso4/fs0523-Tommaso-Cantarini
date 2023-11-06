@@ -35,7 +35,8 @@ class Pet {
     btnForm(){
         this.btnForm = document.querySelector('#btnForm')
         this.btnForm.addEventListener("click", () => {
-            this.getValueHtml();
+            this.getValueHtml()
+            this.removeValue()
         })
     }
     getValueHtml(){
@@ -44,9 +45,14 @@ class Pet {
         this.species= document.querySelector('#species').value
         this.breed= document.querySelector('#breed').value
     }
+    removeValue(){
+        this.petName= document.querySelector('#petName').value = ''
+        this.ownerName= document.querySelector('#ownerName').value = ''
+        this.species= document.querySelector('#species').value = ''
+        this.breed= document.querySelector('#breed').value = ''
+    }
 }
 
 let ciuffo= new Pet
-let kaly = new Pet
 console.log(ciuffo)
 console.log(kaly);
