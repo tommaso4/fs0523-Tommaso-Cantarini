@@ -2,9 +2,15 @@
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import 'mixin';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
 
 .cl-font1 {
     color: $gray-100;
+    font-family: 'Roboto', sans-serif;
 }
 
 #logo {
@@ -29,7 +35,7 @@ footer a,
 .social-footer i {
     text-decoration: none;
     color: $gray-100;
-
+    font-family: 'Roboto', sans-serif;
     &:hover {
         color: white;
         cursor: pointer;

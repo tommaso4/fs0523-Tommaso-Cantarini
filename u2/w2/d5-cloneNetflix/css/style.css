@@ -4,6 +4,7 @@
  * Copyright 2011-2023 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12580,8 +12581,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .cl-font1 {
   color: #BEC3C5;
+  font-family: "Roboto", sans-serif;
 }
 
 #logo img {
@@ -12602,6 +12608,7 @@ footer a,
 .social-footer i {
   text-decoration: none;
   color: #BEC3C5;
+  font-family: "Roboto", sans-serif;
 }
 .my-ul a:hover,
 footer a:hover,
