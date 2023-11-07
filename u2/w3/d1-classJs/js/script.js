@@ -48,18 +48,15 @@ function removeValue() {
 }
 
 function createPetHtml(petObj) {
-    let {petName, ownerName, species, breed} = petObj
     const areaNewPet = document.createElement('div')
     areaNewPet.classList.add('border')
     const area = document.querySelector('#area')
     area.append(areaNewPet)
-    let pPet = document.createElement('p')
-    pPet.innerText = petName + ' ' + ownerName  + ' ' +  species  + ' ' + breed
-    console.log(petObj);
-    // for (const i of petObj) {
-    //     console.log(i);
-    // }
-    areaNewPet.append(pPet)
+    for (const key in petObj) {
+        let pPet = document.createElement('p')
+        pPet.innerText = `${key}:${petObj[key]}`
+        areaNewPet.append(pPet)
+    }
 }
 
 btnForm()
@@ -81,19 +78,18 @@ class Pet {
     }
 }
 
-// class superPet{
-//     constructor() {
-//         this.petName =  null
-//         this.ownerName =  null
-//         this.species =  null
-//         this.breed = null
-//     }
-//     btnForm() {
-//         const btnForm = document.querySelector('#btnForm')
-//         btnForm.addEventListener("click", () => {
-//             getValueHtml()
-//             removeValue()
-//         })
-//     }
+let myPet = new Pet('ciuffo', 'tom', 'dog', 'undefinded')
 
-// }
+console.log(myPet);
+
+class superPet{
+   
+    btnForm() {
+        const btnForm = document.querySelector('#btnForm')
+        btnForm.addEventListener("click", () => {
+            getValueHtml()
+            removeValue()
+        })
+    }
+
+}
