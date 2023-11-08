@@ -53,39 +53,37 @@ function startCounter() {
     setInterval(updateCounter, 1000);
 }
  
-startCounter();
+// startCounter();
 
 
 // -------------------------- prova es 2  oop-----------------------------------
 
 class stampCounter {
-    constructor(){
-        this.startCounter()
-    }
-    initializeCounter(){
-        const initialValue = 0
-        sessionStorage.setItem('counterValue', initialValue.toString())
-    }
+    constructor(){}
+
+    initializeCounter() {
+        if (!sessionStorage.getItem('counterValue')) {
+          const initialValue = 0;
+          sessionStorage.setItem('counterValue', initialValue.toString());
+        }
+      }
 
     startCounter(){
-        if (!sessionStorage.getItem('counterValue')) {
-            this.initializeCounter();
-        }
+        this.initializeCounter()
 
-        const counter = sessionStorage.getItem('counterValue')
 
         const counterElement = document.querySelector('#counter')
 
-        setInterval(this.updateCounter(counter,counterElement),1000)
+        setInterval(()=>this.updateCounter(counterElement),1000)
     }
 
-    updateCounter(counter, counterElement){
-        counter++
+    updateCounter(counterElement){
+        const counter = parseInt(sessionStorage.getItem('counterValue'), 10) + 1
         counterElement.textContent = counter
-        sessionStorage.setItem('counterValue', counter)
+        sessionStorage.setItem('counterValue', counter.toString())
     }
 }
 
-// const myStartCounter = new stampCounter
-// myStartCounter
+const myStartCounter = new stampCounter()
+myStartCounter.startCounter()
 
