@@ -6,3 +6,9 @@ a{
 #logo img{
     width: 70px;
 }
+
+.my-card-edit{
+    position: absolute;
+    top: 170px;
+    width: 20%;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid bg-primary px-5">
+        <div class="d-flex  justify-content-between align-items-center text-light">
+            <div id="logo"><a href="index.html"><img src="img/rip-curl-logo-png-transparent.png" alt="logo"></a></div>
+            <div><a href="index.html" class="">Home Page</a></div>
+        </div>
+    </div>
+    <h1 class="text-center text-primary m-2">EDIT WETSUITS</h1>
+    <div class="container">
+        <form class="m-3 w-50 d-inline-block">
+            <div>
+                <label class="mb-2">Product's name</label>
+                <input type="text" class="new-name form-control d-inline-block mb-3" placeholder="Product's Name">
+            </div>
+            <div>
+                <label class="mb-2">Image Url</label>
+                <input type="text" class="img-url form-control d-inline-block mb-3" placeholder="Image Url">
+            </div>
+            <div>
+                <label class="mb-2">Price</label>
+                <input type="text" class="new-price form-control d-inline-block mb-3" placeholder="Price">
+            </div>
+            <div>
+                <label class="mb-2">Brand</label>
+                <input type="text" class="new-brand form-control d-inline-block mb-3" placeholder="Brand">
+            </div>
+            <div>
+                <label class="mb-2">Description</label>
+                <input type="text" class="new-description form-control d-inline-block mb-3" placeholder="Description">
+            </div>
+            <div>
+                <button id="btnSave" class="btn btn-primary px-5">Save</button>
+            </div>
+        </form>
+        <div id="area-home-page" class="m-3 w-25 d-inline-block ">
+
+        </div>
+    </div>
+
+    <template id="myTemp">
+        <div class="card mb-3">
+            <img src="https://www.thenauticstore.com/5585-large_default/…3mm-chest-zip-mute-da-surf-modello-2022-black.jpg" class="card-img-top imageUrl" alt="logo">
+            <div class="card-body">
+                <h5 class="card-title name-card"></h5>
+                <p class="card-text description"></p>
+                <p class="brand"></p>
+                <p class="price"></p>
+            </div>
+        </div>
+    </template>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/edit-card.js"></script>
+</body>
+
+</html>
