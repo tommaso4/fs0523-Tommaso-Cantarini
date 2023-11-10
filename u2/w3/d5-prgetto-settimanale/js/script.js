@@ -11,7 +11,7 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
     });
 
 function genCArdClone(suits) {
-
+    console.log(suits[1]);
     suits.forEach(suit => {
 
         let myDivArea = document.createElement('div');
@@ -24,12 +24,14 @@ function genCArdClone(suits) {
         let brand = myDivArea.querySelector('.brand');
         let imageUrl = myDivArea.querySelector('.imageUrl');
         let price = myDivArea.querySelector('.price');
+        let id = myDivArea.querySelector('.id-obj');
 
         name.innerText = suit.name;
         description.innerText = suit.description;
         brand.innerText = suit.brand;
         imageUrl.src = suit.imageUrl;
         price.innerText = suit.price;
+        id.href= 'edit.html?'+ '_id=' + suit._id
 
         let areaHomePage = document.querySelector('#area-home-page');
         areaHomePage.append(myDivArea);
