@@ -1,3 +1,11 @@
+  window.addEventListener("load", function() {
+    var spinner = document.querySelector(".spinner-border");
+
+    if (spinner) {
+      spinner.classList.add("d-none");
+    }
+  });
+
 fetch("https://striveschool-api.herokuapp.com/api/product/", {
     headers: {
         'Content-Type': 'application/json',
@@ -13,7 +21,7 @@ function genCArdClone(suits) {
     suits.forEach(suit => {
 
         let myDivArea = document.createElement('div');
-        myDivArea.classList.add('col-3')
+        myDivArea.classList.add('col-md-6','col-12', 'col-lg-3')
         let newCard = showContent();
         myDivArea.append(newCard);
 

@@ -16,7 +16,7 @@ fetch("https://striveschool-api.herokuapp.com/api/product/" + suitId, {
 function genCArdClone(suit) {
 
     let myDivArea = document.createElement('div');
-    myDivArea.classList.add('col-3')
+    myDivArea.classList.add('col-12', 'col-md-3')
     let newCard = showContent();
     myDivArea.append(newCard);
 
