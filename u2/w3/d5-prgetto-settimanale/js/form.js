@@ -1,3 +1,4 @@
+
 const mySuit = {
     'name': 'suit',
     'description': 'Good Choise',
@@ -27,4 +28,16 @@ btnSave.addEventListener('click',function (e){
     .then(suits => {
         location.href = '/index.html'
     })
+
+})
+
+const btnReset = document.querySelector('#btnReset')
+btnReset.addEventListener('click',function (e){
+    e.preventDefault()
+
+    let name = document.querySelector('.new-name').value = ''
+    let imageUrl = document.querySelector('.img-url').value =''
+    let price = document.querySelector('.new-price').value = ''
+    let brand = document.querySelector('.new-brand').value= ''
+    let description = document.querySelector('.new-description').value= '';
 })

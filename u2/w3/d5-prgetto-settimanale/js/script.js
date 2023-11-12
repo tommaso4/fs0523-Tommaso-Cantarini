@@ -29,7 +29,7 @@ function genCArdClone(suits) {
         brand.innerText = suit.brand;
         imageUrl.src = suit.imageUrl;
         price.innerText = suit.price + '$';
-        id.href= 'edit.html?'+ '_id=' + suit._id
+        id.href= 'detail-page.html?'+ '_id=' + suit._id
 
         let areaHomePage = document.querySelector('#area-home-page');
         areaHomePage.append(myDivArea);
