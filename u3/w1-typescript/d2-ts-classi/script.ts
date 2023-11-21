@@ -11,10 +11,10 @@ class SonAccount {
         this.age = age
     }
 
-    deposit(deposit: number): number {
+    public deposit(deposit: number): number {
         return this.belanceInit = this.belanceInit + deposit
     }
-    withdraw(withdraw: number): number {
+    public withdraw(withdraw: number): number {
         return this.belanceInit = this.belanceInit - withdraw
     }
     static crateUser(): void {
@@ -35,20 +35,52 @@ class SonAccount {
             surname.value = '';
             age.value = '';
     }
+    public createAccountHtml():void{
+        const h3Name = document.querySelector('#nameUser') as HTMLHeadingElement;
+        const h3Surname = document.querySelector('#surnameUser') as HTMLHeadingElement;
+        h3Name.innerHTML = this.name;
+        h3Surname.innerHTML = this.surname;
+    }
+    public createDepositHtml(): void {
+        const amount = document.querySelector('#amount') as HTMLInputElement;
+        const belanceUser = document.querySelector('#belance') as HTMLSpanElement;
+        this.deposit(Number(amount.value));
+        belanceUser.innerHTML = ` ${this.belanceInit.toString()}`;
+        amount.value = '';
+    }
+    public crateWithdrawHtml():void{
+        const withdrawal = document.querySelector('#withdrawal') as HTMLInputElement;
+        const belanceUser = document.querySelector('#belance') as HTMLSpanElement;
+        this.withdraw(Number(withdrawal.value));
+        belanceUser.innerHTML = ` ${this.belanceInit.toString()}`;
+        withdrawal.value = '';
+    }
 }
-
-
 
 let arrAccount: Array<SonAccount> = []
 const btnLogIn = document.getElementById('btnLogIn') as HTMLButtonElement;
-
 btnLogIn.addEventListener('click', (e) => {
     e.preventDefault();
     SonAccount.crateUser();
     console.log(arrAccount);
 });
 
+const btnDeposit = document.getElementById('btnDeposit') as HTMLButtonElement;
+
+btnDeposit.addEventListener('click', (e) => {
+    e.preventDefault();
+    son1.createDepositHtml()
+});
+
+const btnWithdraw = document.getElementById('btnWithdrawal') as HTMLButtonElement;
+
+btnWithdraw.addEventListener('click', (e) => {
+    e.preventDefault();
+    son1.crateWithdrawHtml()
+});
+
 let son1: SonAccount = new SonAccount('Giuseppe', 'Rossi', 18)
+son1.createAccountHtml();
 son1.withdraw(100);
 console.log(son1.belanceInit);
 son1.deposit(50)

@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Versamenti-Prelievi</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <h1>BANK</h1>
+
     <div class="cash-withdrall">
-        <!-- <label for="cash-withdrawal">CASH-WITHDRAWAL</label>
-        <select name="cash" id="cash-withdrawal">
-            <option value="mother">Mother</option>
-            <option value="son">Son</option>
-        </select> -->
+        <h2>Login</h2>
         <input type="text" id="name" placeholder="Your name">
         <input type="text" id="surname" placeholder="Your surname">
         <input type="text" id="age" placeholder="Your age">
         <input type="button" id="btnLogIn" value="Log-in">
     </div>
 
-    
+    <div class="deposit">
+        <h2>Deposit</h2>
+        <input type="text" id="amount" placeholder="Amount">
+        <input type="button" id="btnDeposit" value="Deposit">
+    </div>
+
+    <div>
+        <h2>Withdrawal</h2>
+        <input type="text" id="withdrawal" placeholder="withdrawal">
+        <input type="button" id="btnWithdrawal" value="Withdrawal">
+    </div>
+
+    <div>
+        <h3 id="nameUser"></h3>
+        <h3 id="surnameUser"></h3>
+        <h2>Your belance amount:<span id="belance"></span></h2>
+    </div>
+
+
     <script src="script.js"></script>
 </body>
+
 </html>

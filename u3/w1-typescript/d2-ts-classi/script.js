@@ -25,6 +25,26 @@ class SonAccount {
         surname.value = '';
         age.value = '';
     }
+    createAccountHtml() {
+        const h3Name = document.querySelector('#nameUser');
+        const h3Surname = document.querySelector('#surnameUser');
+        h3Name.innerHTML = this.name;
+        h3Surname.innerHTML = this.surname;
+    }
+    createDepositHtml() {
+        const amount = document.querySelector('#amount');
+        const belanceUser = document.querySelector('#belance');
+        this.deposit(Number(amount.value));
+        belanceUser.innerHTML = ` ${this.belanceInit.toString()}`;
+        amount.value = '';
+    }
+    crateWithdrawHtml() {
+        const withdrawal = document.querySelector('#withdrawal');
+        const belanceUser = document.querySelector('#belance');
+        this.withdraw(Number(withdrawal.value));
+        belanceUser.innerHTML = ` ${this.belanceInit.toString()}`;
+        withdrawal.value = '';
+    }
 }
 let arrAccount = [];
 const btnLogIn = document.getElementById('btnLogIn');
@@ -33,7 +53,18 @@ btnLogIn.addEventListener('click', (e) => {
     SonAccount.crateUser();
     console.log(arrAccount);
 });
+const btnDeposit = document.getElementById('btnDeposit');
+btnDeposit.addEventListener('click', (e) => {
+    e.preventDefault();
+    son1.createDepositHtml();
+});
+const btnWithdraw = document.getElementById('btnWithdrawal');
+btnWithdraw.addEventListener('click', (e) => {
+    e.preventDefault();
+    son1.crateWithdrawHtml();
+});
 let son1 = new SonAccount('Giuseppe', 'Rossi', 18);
+son1.createAccountHtml();
 son1.withdraw(100);
 console.log(son1.belanceInit);
 son1.deposit(50);
