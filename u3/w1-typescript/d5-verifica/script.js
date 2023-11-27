@@ -24,27 +24,17 @@ class SmartPhone {
         this.numeroChiamate = 0;
     }
 }
-const mobile1 = new SmartPhone(20, 0.2);
-console.log(mobile1);
-mobile1.chiamata(43);
-mobile1.ricarica(10);
-console.log(mobile1.numero404());
-console.log(mobile1.getNumeroChiamate());
-mobile1.azzeraChiamate();
-console.log(mobile1.getNumeroChiamate());
 const mobile2 = new SmartPhone(30, 0.3);
-console.log(mobile2);
 mobile2.chiamata(100);
 mobile2.ricarica(1);
-console.log(mobile2.numero404());
-console.log(mobile2.getNumeroChiamate());
 mobile2.azzeraChiamate();
-console.log(mobile2.getNumeroChiamate());
 class ExtendSmartPhone extends SmartPhone {
     constructor(carica, costoMinuto) {
         super(carica, costoMinuto);
         this.carica = carica;
         this.costoMinuto = costoMinuto;
+        this.intervalId = null;
+        this.count = 0;
         this.registroChiamate = [];
     }
     chiamata(min) {
@@ -62,26 +52,80 @@ class ExtendSmartPhone extends SmartPhone {
         let arrayFiltrato = this.registroChiamate.filter((call) => call.oraData.getTime() == data.getTime());
         return arrayFiltrato;
     }
-    creaUnaChimata(id, durata, oraData) {
-        const unaChimata = {
-            id: id,
-            durata: durata,
-            oraData: oraData
-        };
-        this.registroChiamate.push(unaChimata);
+    keyPressed() {
+        let allKeys = document.querySelectorAll('.key-number p');
+        console.log(allKeys);
+        let inputSmartphone = document.querySelector('#numberPressed input');
+        for (const key of allKeys) {
+            if (key) {
+                key.addEventListener('click', () => {
+                    if (inputSmartphone) {
+                        inputSmartphone.value += key.innerHTML;
+                    }
+                });
+            }
+        }
+    }
+    callPhone() {
+        const btnCall = document.querySelector('#chiama');
+        if (btnCall) {
+            btnCall.addEventListener('click', () => {
+                let inputSmartphone = document.querySelector('#numberPressed input');
+                let inputSmartphoneDiv = document.querySelector('#numberPressed');
+                let inputNumber = inputSmartphone.value;
+                btnCall.style.backgroundColor = 'red';
+                const btnCallP = document.querySelector('#chiama p');
+                btnCallP.innerHTML = 'Chiudi';
+                inputSmartphone.classList.toggle('none');
+                this.inputCall(inputSmartphone, inputNumber, inputSmartphoneDiv);
+            });
+        }
+    }
+    inputCall(input, inputNum, inputDiv) {
+        if (input.classList.contains('none')) {
+            const chiamata = document.createElement('p');
+            chiamata.classList.add('chimata');
+            chiamata.innerHTML = inputNum;
+            inputDiv.appendChild(chiamata);
+            const myspnan = document.createElement('span');
+            setInterval(() => {
+                this.count++;
+                myspnan.innerHTML = String(this.count);
+                chiamata.appendChild(myspnan);
+            }, 1000);
+            const durata = this.initInterval();
+            this.chiamata(durata);
+        }
+        else {
+            const chiamata = inputDiv.querySelector('.chimata');
+            chiamata.remove();
+            input.value = '';
+            this.stopCounter();
+        }
+    }
+    startCounter() {
+        this.intervalId = setInterval(() => {
+            this.count++;
+            console.log(this.count);
+        }, 1000);
+    }
+    stopCounter() {
+        if (this.intervalId !== null) {
+            clearInterval(this.intervalId);
+        }
+    }
+    initInterval() {
+        this.startCounter();
+        return this.count;
     }
 }
 let extendSmartPhone = new ExtendSmartPhone(40, 0.3);
-console.log(extendSmartPhone);
-extendSmartPhone.ricarica(10);
-extendSmartPhone.chiamata(100);
-extendSmartPhone.chiamata(100);
-extendSmartPhone.chiamata(100);
-extendSmartPhone.creaUnaChimata(3, 10, new Date('Fri Nov 24 2023 15:02:04 GMT+0100'));
-console.log(extendSmartPhone.numero404());
-console.log(extendSmartPhone.mostraRegistoChiamate());
 const data1 = 'Fri Nov 24 2023 15:02:04 GMT+0100';
 const data1Date = new Date(data1);
+extendSmartPhone.keyPressed();
+extendSmartPhone.callPhone();
+extendSmartPhone.chiamata(33);
 console.log(extendSmartPhone.filtraChamatePerData(data1Date));
+console.log(extendSmartPhone);
 export {};
 //# sourceMappingURL=script.js.map

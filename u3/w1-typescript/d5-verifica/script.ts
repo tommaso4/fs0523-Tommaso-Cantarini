@@ -27,32 +27,21 @@ class SmartPhone implements IMobile {
     }
 }
 
-const mobile1: IMobile = new SmartPhone(20, 0.2);
-console.log(mobile1);
-mobile1.chiamata(43);
-mobile1.ricarica(10);
-console.log(mobile1.numero404());
-console.log(mobile1.getNumeroChiamate());
-mobile1.azzeraChiamate();
-console.log(mobile1.getNumeroChiamate());
-
 const mobile2: IMobile = new SmartPhone(30, 0.3)
-console.log(mobile2);
 mobile2.chiamata(100);
 mobile2.ricarica(1);
-console.log(mobile2.numero404());
-console.log(mobile2.getNumeroChiamate());
 mobile2.azzeraChiamate();
-console.log(mobile2.getNumeroChiamate());
 
 class ExtendSmartPhone extends SmartPhone {
+    private intervalId: number | null = null;
+    private count: number = 0;
     public registroChiamate: registroChimate[] = [];
     constructor(public carica: number,
         public costoMinuto: number) {
         super(carica, costoMinuto);
     }
-    chiamata(min: number): void {
-        super.chiamata(min)
+    public chiamata(min: number): void {
+        super.chiamata(min)    
         this.registroChiamate.push({
             id: this.numeroChiamate,
             durata: min,
@@ -63,7 +52,7 @@ class ExtendSmartPhone extends SmartPhone {
         return this.registroChiamate;
     }
     filtraChamatePerData(data: Date): registroChimate[] {
-        let arrayFiltrato:registroChimate[] = this.registroChiamate.filter((call) => call.oraData.getTime() == data.getTime());
+        let arrayFiltrato: registroChimate[] = this.registroChiamate.filter((call) => call.oraData.getTime() == data.getTime());
         return arrayFiltrato;
     }
 
@@ -120,23 +109,37 @@ class ExtendSmartPhone extends SmartPhone {
             input.value = '';
             this.stopCounter()
         }
-        this.registroChiamate.push(unaChimata);
     }
+
+    startCounter(): void {
+        this.intervalId = setInterval(() => {
+            this.count++;
+            console.log(this.count);
+        }, 1000);
+    }
+
+    stopCounter(): void {
+        if (this.intervalId !== null) {
+            clearInterval(this.intervalId);
+        }
+    }
+
+    initInterval(): number {
+        this.startCounter();
+        return this.count;
+    }
+
 }
 
 let extendSmartPhone = new ExtendSmartPhone(40, 0.3);
-console.log(extendSmartPhone);
-extendSmartPhone.ricarica(10);
-extendSmartPhone.chiamata(100);
-extendSmartPhone.chiamata(100);
-extendSmartPhone.chiamata(100);
-extendSmartPhone.creaUnaChimata(3, 10, new Date('Fri Nov 24 2023 15:02:04 GMT+0100'));
-console.log(extendSmartPhone.numero404());
-console.log(extendSmartPhone.mostraRegistoChiamate());
-
-
-
 const data1 = 'Fri Nov 24 2023 15:02:04 GMT+0100'
 const data1Date = new Date(data1);
+
+extendSmartPhone.keyPressed();
+extendSmartPhone.callPhone();
+extendSmartPhone.chiamata(33);
 console.log(extendSmartPhone.filtraChamatePerData(data1Date))
+console.log(extendSmartPhone);
+
+
 
