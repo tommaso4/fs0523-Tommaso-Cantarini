@@ -67,11 +67,58 @@ class ExtendSmartPhone extends SmartPhone {
         return arrayFiltrato;
     }
 
-    creaUnaChimata(id: number, durata: number, oraData: Date): void {
-        const unaChimata = {
-            id: id,
-            durata: durata,
-            oraData: oraData
+    keyPressed(): void {
+        let allKeys: NodeListOf<Element> = document.querySelectorAll('.key-number p')
+        console.log(allKeys);
+        let inputSmartphone: HTMLInputElement = document.querySelector('#numberPressed input')!;
+
+        for (const key of allKeys) {
+            if (key) {
+                key.addEventListener('click', () => {
+                    if (inputSmartphone) {
+                        inputSmartphone.value += key.innerHTML;
+                    }
+                })
+            }
+        }
+    }
+
+    callPhone(): void {
+        const btnCall: HTMLDivElement = document.querySelector('#chiama')!;
+        if (btnCall) {
+            btnCall.addEventListener('click', () => {
+                let inputSmartphone: HTMLInputElement = document.querySelector('#numberPressed input')!;
+                let inputSmartphoneDiv: HTMLDivElement = document.querySelector('#numberPressed')!;
+                let inputNumber: string = inputSmartphone.value;
+                btnCall.style.backgroundColor = 'red';
+
+                const btnCallP: HTMLParagraphElement = document.querySelector('#chiama p')!;
+                btnCallP.innerHTML = 'Chiudi';
+
+                inputSmartphone.classList.toggle('none')
+                this.inputCall(inputSmartphone, inputNumber, inputSmartphoneDiv)
+            })
+        }
+    }
+
+    inputCall(input: HTMLInputElement, inputNum: string, inputDiv: HTMLDivElement): void {
+        if (input.classList.contains('none')) {
+            const chiamata: HTMLParagraphElement = document.createElement('p');
+            chiamata.classList.add('chimata');
+            chiamata.innerHTML = inputNum;
+            inputDiv.appendChild(chiamata);
+            const myspnan = document.createElement('span');
+            setInterval(() => {
+                this.count++;
+                myspnan.innerHTML = String(this.count);
+                chiamata.appendChild(myspnan);
+            }, 1000)
+            const durata = this.initInterval()
+            this.chiamata(durata);} else {
+            const chiamata = inputDiv.querySelector('.chimata')!;
+            chiamata.remove();
+            input.value = '';
+            this.stopCounter()
         }
         this.registroChiamate.push(unaChimata);
     }
