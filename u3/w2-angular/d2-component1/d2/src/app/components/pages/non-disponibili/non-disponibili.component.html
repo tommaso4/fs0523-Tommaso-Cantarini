@@ -1,0 +1,13 @@
+<div class="container-fluid px-5 bg-success pt-5 pb-5 height">
+  <div class="row">
+    <div *ngFor="let post of posts" class="col-4">
+      <div class="bg-secondary">
+        <h4 class="text-center">POST</h4>
+      </div>
+      <h5>{{ post.title }}</h5>
+      <p>{{ post.body }}</p>
+      <p class="d-inline-block mb-5">{{ post.disponibile }}</p>
+      <button (click)="post.disponibile = !post.disponibile"   class="btn btn-secondary ms-2">Cambia Disponibilità</button>
+    </div>
+  </div>
+</div>
