@@ -1,0 +1,10 @@
+<form>
+  <input [(ngModel)]="post.title" name="title" class="mt-2" type="text" placeholder="Titolo">
+  <input [(ngModel)]="post.type" name="type" class="mt-2" type="text" placeholder="type">
+  <input [(ngModel)]="post.id" name="id" class="mt-2" type="number" placeholder="id">
+  <input [(ngModel)]="post.body" name="body" class="mt-2" type="text" placeholder="Descrizione">
+  <div>
+    <button (click)="addPost()" class="btn btn-success me-1 mt-2">Crea</button>
+    <button (click)="upDatePost()" class="btn btn-warning mt-2">Modifica</button>
+  </div>
+</form>
