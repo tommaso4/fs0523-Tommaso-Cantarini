@@ -83,10 +83,6 @@ export class PostsArrService {
       this.posts.push(newPost);
     }
 
-    getPostById(postId: number): IPost | undefined {
-      return this.posts.find(post => post.id === postId);
-    }
-
     updatePost(updatedPost: IPost): void {
       const index = this.posts.findIndex(post => post.id === updatedPost.id);
       if (index !== -1) {

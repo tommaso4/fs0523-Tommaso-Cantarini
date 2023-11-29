@@ -10,6 +10,10 @@ import { PostsArrService } from '../../../posts-arr.service';
 export class NonDisponibiliComponent implements OnInit {
     posts: IPost[] = [];
 
+    setBg(post:IPost){
+      return{'bg-primary':post.type==='politics','bg-warning':post.type==='education','bg-danger':post.type==='news'}
+    }
+
     constructor(private postsArrService: PostsArrService) { }
 
     ngOnInit() {

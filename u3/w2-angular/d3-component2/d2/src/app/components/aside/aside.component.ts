@@ -22,14 +22,12 @@ export class AsideComponent {
     this.post.disponibile = true;
     this.postsArrService.createPost(this.post);
     this.resetForm()
-
   }
 
   upDatePost() {
-    const existingPost = this.postsArrService.getPostById(this.post.id);
-      this.postsArrService.updatePost(this.post);
-      this.resetForm();
-
+    this.post.disponibile = true;
+    this.postsArrService.updatePost(this.post);
+    this.resetForm();
   }
 
   resetForm() {
