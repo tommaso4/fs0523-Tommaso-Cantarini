@@ -1,0 +1,11 @@
+<div class="container">
+  <div *ngFor="let todo of todos">
+    <h4 [ngClass]="{'green': todo.completed,'red' : !todo.completed}">{{ todo.title }}</h4>
+    <button (click)="delate(todo.id.toString())">delate</button>
+    <button (click)="toggleCompleted(todo)">{{ todo.completed }}</button>
+  </div>
+  <div class="todos">
+    <input [(ngModel)]="todo.title" name="title" type="text" />
+    <button (click)="createTodos()">ADD</button>
+  </div>
+</div>
