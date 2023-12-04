@@ -1,0 +1,13 @@
+<div class="cantariner-fluid">
+  <div class="row justify-content-center">
+    <div *ngFor="let prod of myProduc" id="myCard" class="col-3 my-2 mx-2">
+      <h3>{{prod.title}}</h3>
+      <h4>{{prod.brand}}</h4>
+      <h5>{{prod.category}}</h5>
+      <img src="{{prod.images[2]}}" alt="img">
+      <p>{{prod.description}}</p>
+      <p class="price">{{prod.price}}</p>
+      <button (click)="removePreferiti(prod)">Rimuovi dai preferiti</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="ms-5 px-2 border-2 border" [ngClass]="setBg(post)">
+  <div class="bg-secondary">
+    <h4 class="text-center">POST</h4>
+  </div>
+  <h5>{{ post.title }}</h5>
+  <p>{{ post.body }}</p>
+  <p>{{ post.type }}</p>
+  <p>{{ post.id }}</p>
+  <p class="d-inline-block mb-5">{{ post.disponibile }}</p>
+  <app-btn-disp [post]="post"></app-btn-disp>
+</div>
