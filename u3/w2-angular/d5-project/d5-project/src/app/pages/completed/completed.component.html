@@ -1,1 +1,9 @@
-<p>completed works!</p>
+<h3 class="green">COMPLETED</h3>
+<div class="container">
+  <div *ngFor="let todo of todos">
+    <h4 [ngClass]="{'green': todo.completed,'red' : !todo.completed}">{{ todo.title }}</h4>
+    <button (click)="delate(todo.id.toString())">delate</button>
+    <button (click)="toggleCompleted(todo)">{{todo.completed ? 'Complete' : 'Incomplete' }}</button>
+  </div>
+</div>
+

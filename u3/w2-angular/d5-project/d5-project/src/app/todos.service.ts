@@ -9,7 +9,7 @@ export class TodosService {
   apiUrl:string = 'http://localhost:3000/todos'
 
   getAll():Promise<ITodos[]>{
-    return fetch(this.apiUrl).then(res => res.json())
+    return fetch(this.apiUrl).then(res => res.json());
   }
 
   create(todo:Partial<ITodos>):Promise<ITodos> {
