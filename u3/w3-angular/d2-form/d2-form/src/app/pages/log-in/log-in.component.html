@@ -1,0 +1,78 @@
+<div class="col-6 mx-auto mt-4">
+  <h4 class="text-center">LOG-IN</h4>
+  <form [formGroup]="form">
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('name')}">
+      <label>Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="name"
+        placeholder="Your name"
+      />
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('surname')}">
+      <label>Surname:</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="surname"
+        placeholder="Your surname"
+      />
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('password')}">
+      <label>Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        formControlName="password"
+        placeholder="Your Password"
+      />
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('password2')}">
+      <label>repeat Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        formControlName="password2"
+        placeholder="Your repeat Password"
+      />
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('gender')}">
+      <label>Gender:</label>
+      <select formControlName="gender" class="form-control">
+        <option value="man">Man</option>
+        <option value="woman">Woman</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('image')}">
+      <label>Your Image:</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="image"
+        placeholder="Your Image"
+      />
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('bio')}">
+      <label>Your Biography:</label>
+      <input
+        type="textarea"
+        class="form-control"
+        formControlName="bio"
+        placeholder="Your Biography"
+      />
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('user')}">
+      <label>Your Username:</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="user"
+        placeholder="Your Username"
+      />
+    </div>
+
+    <button (click)="send()" class="btn btn-dark mt-2">LOG-IN</button>
+  </form>
+</div>

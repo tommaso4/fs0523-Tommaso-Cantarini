@@ -1,0 +1,40 @@
+<div class="col-6 mx-auto mt-4">
+  <h4 class="text-center">LOG-IN</h4>
+  <form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="userName">Username:</label>
+      <input
+        type="text"
+        id="userName"
+        name="userName"
+        [(ngModel)]="model.userName"
+        required
+        minlength="3"
+        maxlength="20"
+        class="form-control"
+      />
+      <div *ngIf="form.controls['userName']?.invalid && form.controls['userName']?.touched" class="text-danger">
+        <div *ngIf="form.controls['userName']?.hasError('required')">Il campo è obbligatorio.</div>
+        <div *ngIf="form.controls['userName']?.hasError('minlength')">Il campo deve contenere almeno 3 caratteri.</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="model.password"
+        required
+        minlength="6"
+        maxlength="20"
+        class="form-control"
+      />
+      <div *ngIf="form.controls['password']?.invalid && form.controls['password']?.touched" class="text-danger">
+        <div *ngIf="form.controls['password']?.hasError('required')">Il campo è obbligatorio.</div>
+        <div *ngIf="form.controls['password']?.hasError('minlength')">Il campo deve contenere almeno 6 caratteri.</div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-dark mt-2">LOG-IN</button>
+  </form>
+</div>
