@@ -1,11 +1,15 @@
 <div class="container">
-  <div *ngFor="let todo of todos">
-    <h4 [ngClass]="{'green': todo.completed,'red' : !todo.completed}">{{ todo.title }}</h4>
-    <button (click)="delate(todo.id.toString())">delate</button>
-    <button (click)="toggleCompleted(todo)">{{ todo.completed ? 'Complete' : 'Incomplete' }}</button>
+  <h3>ToDo</h3>
+  <div *ngIf="loading">
+    <p>Loading...</p>
+  </div>
+  <div *ngFor="let todo of todos; let index = index">
+    <h4 [ngClass]="{'green': todo.completed,'red' : !todo.completed}">- {{index + 1}} {{ todo.title }}</h4>
+    <button class="btn" (click)="delate(todo.id.toString())">delate</button>
+    <button class="btn" (click)="toggleCompleted(todo)">{{ todo.completed ? 'Complete' : 'Incomplete' }}</button>
   </div>
   <div class="todos">
     <input [(ngModel)]="todo.title" name="title" type="text" />
-    <button (click)="createTodos()">ADD</button>
+    <button class="btn" (click)="createTodos()">ADD</button>
   </div>
 </div>

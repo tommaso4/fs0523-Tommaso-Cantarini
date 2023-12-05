@@ -1,0 +1,3 @@
+Comando da lanciare
+
+$ json-server db.json -w -d 2000
