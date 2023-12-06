@@ -1,0 +1,61 @@
+<a routerLink="/auth">LOG</a>
+<div class="col-6 mx-auto mt-4">
+  <h4 class="text-center">SIGN-IN</h4>
+  <form [formGroup]="form">
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('name')}">
+      <label>Name:</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="name"
+        placeholder="Your name"
+      />
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('surname')}">
+      <label>Surname:</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="surname"
+        placeholder="Your surname"
+      />
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('surname')}">
+      <label>Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        formControlName="email"
+        placeholder="Your email"
+      />
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('password')}">
+      <label>Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        formControlName="password"
+        placeholder="Your Password"
+      />
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('gender')}">
+      <label>Gender:</label>
+      <select formControlName="gender" class="form-control">
+        <option value="man">Man</option>
+        <option value="woman">Woman</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="mt-2" [ngClass]="{'has-error': isControlInvalid('user')}">
+      <label>Your Username:</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="user"
+        placeholder="Your Username"
+      />
+    </div>
+
+    <button (click)="send()" class="btn btn-dark mt-2">LOG-IN</button>
+  </form>
+</div>
