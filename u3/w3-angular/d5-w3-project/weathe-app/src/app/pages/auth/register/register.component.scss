@@ -1,0 +1,25 @@
+#container{
+  background-color: blue;
+  height: 100vh;
+}
+
+#log-home{
+  border: 2px solid rgba(255, 255, 255, 0.336);
+  width: 40vw;
+  margin: 0 auto;
+  padding: 20px;
+  input{
+    margin: 10px 0;
+  }
+  a{
+    text-decoration: none;
+    color: rgb(99, 99, 99);
+    padding: 5px 20px;
+    &:hover{
+      cursor: pointer;
+      border: 1px solid white;
+      color: white;
+      opacity: 0.5;
+    }
+  }
+}

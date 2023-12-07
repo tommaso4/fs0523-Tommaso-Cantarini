@@ -1,0 +1,16 @@
+<div id="container">
+  <div class="pt-5">
+    <div id="log-home">
+      <h5>Registrazione</h5>
+      <form>
+        <input [(ngModel)]="registerData.nome" name="nome" type="text" class="form-control" placeholder="Nome">
+        <input [(ngModel)]="registerData.email" name="email" type="email" class="form-control" placeholder="Email">
+        <input [(ngModel)]="registerData.password" name="password" type="password" class="form-control" placeholder="Password">
+        <div>
+          <a (click)="save()">Registrami</a>
+          <a routerLink="/auth/login">Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<app-nav></app-nav>
+<div id="container">
+  <div class="col-12">
+    <div id="myform">
+      <form>
+        <input type="text" [(ngModel)]="searchQuery" name="searchQuery">
+        <button (click)="search()">SEARCH</button>
+      </form>
+    </div>
+    <div id="main" *ngIf="isMainVisible">
+      <div>
+        <div class="city">
+          <span>Country: <h5>{{citysrc.country}}</h5></span>
+          <span>Region: <h5>{{citysrc.state}}</h5></span>
+          <span>City: <h5>{{citysrc.local_names.it}}</h5></span>
+          <span>Lon: <h5>{{citysrc.lon}}</h5></span>
+          <span>Lon: <h5>{{citysrc.lat}}</h5></span>
+          <button class="btn">ADD</button>
+        </div>
+      </div>
+      <div >
+        casino
+      </div>
+    </div>
+  </div>
+</div>
