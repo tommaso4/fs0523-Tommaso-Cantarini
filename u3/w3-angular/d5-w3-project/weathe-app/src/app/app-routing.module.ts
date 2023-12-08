@@ -9,7 +9,7 @@ const routes: Routes = [
     pathMatch: 'full'
 
   },
-  { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
+  { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule),canActivate: [AuthGuard]  },
   { path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule) },
 ];
 

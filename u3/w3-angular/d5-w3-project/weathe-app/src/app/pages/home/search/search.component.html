@@ -3,19 +3,18 @@
   <div class="col-12">
     <div id="myform">
       <form>
-        <input type="text" [(ngModel)]="searchQuery" name="searchQuery" />
+        <input type="text" [(ngModel)]="searchQuery" name="searchQuery" placeholder="Search"/>
         <button (click)="search()">SEARCH</button>
       </form>
     </div>
-    <!-- *ngIf="isMainVisible" -->
     <div id="main" *ngIf="isMainVisible">
       <div class="city">
         <div>
-          <h5>Country: <span> {{ citysrc.country }}</span></h5>
-          <h5>Region: <span> {{ citysrc.state }}</span></h5>
-          <h5>City: <span> {{ citysrc.local_names.it }}</span></h5>
-          <h5>Lon: <span> {{ citysrc.lon }}</span></h5>
-          <h5>Lat: <span> {{ citysrc.lat }}</span></h5>
+          <h5>Country: <span> {{ citySel?.country }}</span></h5>
+          <h5>Population: <span> {{ citySel?.population }}</span></h5>
+          <h5>City: <span> {{ citySel?.name }}</span></h5>
+          <h5>Lon: <span> {{ citySel?.coord.lon }}</span></h5>
+          <h5>Lat: <span> {{ citySel?.coord.lat }}</span></h5>
           <button (click)="addFavorite()" class="btn">ADD</button>
         </div>
       </div>

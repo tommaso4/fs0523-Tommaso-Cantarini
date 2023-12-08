@@ -15,8 +15,6 @@ export class HomeComponent {
   ngOnInit(){
     this.mysub= this.authSvc.user$.subscribe( user => {
       this.user = user?.user
-      console.log(this.user);
-
     })
   }
 

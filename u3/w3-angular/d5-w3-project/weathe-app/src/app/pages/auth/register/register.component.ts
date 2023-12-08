@@ -1,7 +1,8 @@
 import { AuthService } from './../auth.service';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { iRegister } from '../Models/register';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -9,6 +10,9 @@ import { Router } from '@angular/router';
   styleUrl: './register.component.scss'
 })
 export class RegisterComponent {
+
+  @ViewChild('form', { static: true }) form!: NgForm;
+
 
   constructor(
     private authSvc:AuthService,

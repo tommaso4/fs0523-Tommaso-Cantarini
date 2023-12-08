@@ -23,18 +23,21 @@ export class FavoriteComponent {
   ngOnInit(){
     this.authSvc.getFavorite().subscribe(fav => {
       this.favorite = fav;
-
       this.favorite.forEach((el:any) => {
-        this.homeSvc.getWeather(el.lat, el.lon).subscribe(data => {
+        this.homeSvc.getWeather(el.coord.lat, el.coord.lon).subscribe(data => {
           this.wheatherFavorite.push(data);
-          console.log(this.wheatherFavorite);
-
         })
       });
 
     })
   }
 
+  removeFavorite(cityId:any) {
+
+    this.authSvc.removeFavorite(cityId).subscribe(() => {
+      this.wheatherFavorite = this.wheatherFavorite.filter((fav:any) => fav.city.id !== Number(cityId));
+    });
+  }
 
   formatDateTime(dateTime: string): string {
     const formattedDate = this.datePipe.transform(dateTime, 'dd/MM HH:mm');

@@ -14,6 +14,8 @@ export class SearchComponent {
   searchQuery: string = '';
   citysrc: any;
   weatherForecast: any;
+  citySel:any;
+
 
   isMainVisible: boolean = false;
 
@@ -23,24 +25,28 @@ export class SearchComponent {
     private authSvc: AuthService) { }
 
 
-  search() {
 
-    this.homeSvc.searchCity(this.searchQuery).subscribe(data => {
-      if (data) {
-        this.isMainVisible = true;
-        this.citysrc = data[0];
-        const lat = data[0].lat;
-        const lon = data[0].lon;
+search() {
+  this.homeSvc.searchCity(this.searchQuery).subscribe(data => {
+    if (data && data.length > 0) {
+      this.isMainVisible = true;
+      this.citysrc = data[0];
+      const lat = data[0].lat;
+      const lon = data[0].lon;
 
-        this.homeSvc.getWeather(lat, lon).subscribe(forecast => {
+      this.homeSvc.getWeather(lat, lon).subscribe(forecast => {
+        if (forecast && forecast.city) {
+          this.citySel = forecast.city;
+
           this.weatherForecast = forecast.list;
-          console.log(this.weatherForecast);
-        });
-      }
-    });
+        }
+      });
+    }
+  });
 
-    this.searchQuery = '';
-  }
+  this.searchQuery = '';
+}
+
 
   formatDateTime(dateTime: string): string {
     const formattedDate = this.datePipe.transform(dateTime, 'dd/MM HH:mm');
@@ -48,8 +54,7 @@ export class SearchComponent {
   }
 
   addFavorite() {
-    this.authSvc.addFavorite(this.citysrc).subscribe(data => {
-        console.log(data)
+    this.authSvc.addFavorite(this.citySel).subscribe(data => {
     })
   }
 }

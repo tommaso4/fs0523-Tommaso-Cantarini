@@ -2,10 +2,49 @@
   <div class="pt-5">
     <div id="log-home">
       <h5>Registrazione</h5>
-      <form>
-        <input [(ngModel)]="registerData.nome" name="nome" type="text" class="form-control" placeholder="Nome">
-        <input [(ngModel)]="registerData.email" name="email" type="email" class="form-control" placeholder="Email">
-        <input [(ngModel)]="registerData.password" name="password" type="password" class="form-control" placeholder="Password">
+      <form #form="ngForm">
+        <input
+          [(ngModel)]="registerData.nome"
+          required
+          minlength="3"
+          maxlength="20"
+          name="nome"
+          type="text"
+          class="form-control"
+          placeholder="Nome"
+        />
+        <div *ngIf="form.controls['nome']?.invalid && form.controls['nome']?.touched" class="text-danger">
+          <div *ngIf="form.controls['nome']?.hasError('required')">Il campo è obbligatorio.</div>
+          <div *ngIf="form.controls['nome']?.hasError('minlength')">Il campo deve contenere almeno 3 caratteri.</div>
+        </div>
+        <input
+          [(ngModel)]="registerData.email"
+          name="email"
+          type="email"
+          required
+          minlength="6"
+          maxlength="40"
+          class="form-control"
+          placeholder="Email"
+        />
+        <div *ngIf="form.controls['email']?.invalid && form.controls['email']?.touched" class="text-danger">
+          <div *ngIf="form.controls['email']?.hasError('required')">Il campo è obbligatorio.</div>
+          <div *ngIf="form.controls['email']?.hasError('minlength')">Il campo deve contenere almeno 6 caratteri.</div>
+        </div>
+        <input
+          [(ngModel)]="registerData.password"
+          name="password"
+          required
+          minlength="6"
+          maxlength="20"
+          type="password"
+          class="form-control"
+          placeholder="Password"
+        />
+        <div *ngIf="form.controls['password']?.invalid && form.controls['password']?.touched" class="text-danger">
+          <div *ngIf="form.controls['password']?.hasError('required')">Il campo è obbligatorio.</div>
+          <div *ngIf="form.controls['password']?.hasError('minlength')">Il campo deve contenere almeno 6 caratteri.</div>
+        </div>
         <div>
           <a (click)="save()">Registrami</a>
           <a routerLink="/auth/login">Login</a>

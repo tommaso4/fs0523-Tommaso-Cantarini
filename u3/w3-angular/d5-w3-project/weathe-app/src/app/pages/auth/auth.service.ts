@@ -51,6 +51,11 @@ export class AuthService {
     return this.http.get(this.favoriteUrl)
   }
 
+  removeFavorite(cityId: string): Observable<any> {
+    const removeUrl = `${this.favoriteUrl}/${cityId}`;
+    return this.http.delete(removeUrl);
+  }
+
   autoLogout(jwt:string){
     const expDate = this.jwtHelper.getTokenExpirationDate(jwt) as Date;
     const expMs = expDate.getTime() - new Date().getTime();

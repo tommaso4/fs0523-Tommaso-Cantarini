@@ -1,7 +1,8 @@
 import { AuthService } from './../auth.service';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { iLogin } from '../Models/login';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,14 +11,16 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
+  @ViewChild('form', { static: true }) form!: NgForm;
+
   constructor(
     private authSvc:AuthService,
     private router:Router
     ){}
 
   loginData:iLogin = {
-    email: 'mario@rossi.it',
-    password: 'password'
+    email: '',
+    password: ''
   }
 
   save(){
