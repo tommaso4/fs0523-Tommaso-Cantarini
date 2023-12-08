@@ -1,5 +1,7 @@
+import { AuthService } from './../../auth/auth.service';
 import { HomeService } from './../home.service';
 import { Component } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-search',
@@ -10,29 +12,28 @@ export class SearchComponent {
 
 
   searchQuery: string = '';
-  citysrc:any;
+  citysrc: any;
   weatherForecast: any;
+
   isMainVisible: boolean = false;
 
-  constructor(private homeSvc: HomeService) {}
+  constructor(
+    private homeSvc: HomeService,
+    private datePipe: DatePipe,
+    private authSvc: AuthService) { }
 
 
   search() {
 
-    console.log('Valore di ricerca:', this.searchQuery);
     this.homeSvc.searchCity(this.searchQuery).subscribe(data => {
-      console.log(data[0]);
-
       if (data) {
         this.isMainVisible = true;
         this.citysrc = data[0];
         const lat = data[0].lat;
         const lon = data[0].lon;
-        console.log(this.citysrc);
-
 
         this.homeSvc.getWeather(lat, lon).subscribe(forecast => {
-          this.weatherForecast = forecast;
+          this.weatherForecast = forecast.list;
           console.log(this.weatherForecast);
         });
       }
@@ -41,4 +42,14 @@ export class SearchComponent {
     this.searchQuery = '';
   }
 
+  formatDateTime(dateTime: string): string {
+    const formattedDate = this.datePipe.transform(dateTime, 'dd/MM HH:mm');
+    return formattedDate || dateTime;
+  }
+
+  addFavorite() {
+    this.authSvc.addFavorite(this.citysrc).subscribe(data => {
+        console.log(data)
+    })
+  }
 }

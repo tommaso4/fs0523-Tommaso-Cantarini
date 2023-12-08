@@ -1,4 +1,11 @@
 <app-nav></app-nav>
-<div>
-  favorite
+<div id="container">
+    <div *ngFor="let fav of wheatherFavorite" class="mycard">
+        <h1 id="myh1">{{fav.city.name}}</h1>
+        <div *ngFor="let prev of fav.list" class="d-flex justify-content-start align-items-baseline prev">
+          <span><p>{{ formatDateTime(prev.dt_txt) }}</p></span>
+          <h6>{{ prev.weather[0].description }}</h6>
+          <h6><span>Temp:</span>{{ prev.main.temp}} &deg;C</h6>
+        </div>
+    </div>
 </div>

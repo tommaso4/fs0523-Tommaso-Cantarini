@@ -7,9 +7,11 @@ import { NavComponent } from './nav/nav.component';
 import { SearchComponent } from './search/search.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import { FormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
+  providers: [DatePipe],
   declarations: [
     HomeComponent,
     NavComponent,

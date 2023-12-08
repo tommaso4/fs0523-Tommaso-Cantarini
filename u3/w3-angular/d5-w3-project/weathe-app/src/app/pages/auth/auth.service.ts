@@ -16,22 +16,17 @@ export class AuthService {
   jwtHelper:JwtHelperService = new JwtHelperService()
   authSubject = new BehaviorSubject<iAccessData|null>(null);
 
-  user$ = this.authSubject.asObservable();//contiene i dati dell'utente loggato oppure null
-  isLoggedIn$ = this.user$.pipe(map(user => !!user))//fornisce true o false in base allo stato di autenticaziuone dell'utente
-  //isLoggedIn$ = this.user$.pipe(map(user => Boolean(user)))
+  user$ = this.authSubject.asObservable();
+  isLoggedIn$ = this.user$.pipe(map(user => !!user))
 
   constructor(
     private http:HttpClient,
     private router:Router
-  ) {
-
-    this.restoreUser()
-
-  }
+  ) {this.restoreUser()}
 
   registerUrl:string = environment.apiUrl + '/register';
   loginUrl:string = environment.apiUrl + '/login'
-
+  favoriteUrl:string = environment.apiUrl + '/favorite'
 
 
   signUp(data:iRegister):Observable<iAccessData>{
@@ -44,10 +39,16 @@ export class AuthService {
 
       this.authSubject.next(data)
       localStorage.setItem('accessData',JSON.stringify(data))
-
-
       this.autoLogout(data.accessToken)
     }))
+  }
+
+  addFavorite(city:any):Observable<any>{
+    return this.http.post(this.favoriteUrl, city)
+  }
+
+  getFavorite(){
+    return this.http.get(this.favoriteUrl)
   }
 
   autoLogout(jwt:string){
